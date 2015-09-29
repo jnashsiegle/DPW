@@ -88,7 +88,7 @@ def calcArea(h, w):
 	return area
  
 a = calcArea(20, 40);
-#print "My area is " + str(a) + "sq ft"
+print "My area is " + str(a) + "sq ft"
 
 #locals Method
 
