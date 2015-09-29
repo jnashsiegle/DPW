@@ -1,0 +1,15 @@
+Last login: Mon Sep 28 15:14:30 on console
+Janas-MacBook-Pro:~ janasiegle$ python --version
+Python 2.7.10
+Janas-MacBook-Pro:~ janasiegle$ python
+Python 2.7.10 (default, Jul 14 2015, 19:46:27) 
+[GCC 4.2.1 Compatible Apple LLVM 6.0 (clang-600.0.39)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> 2+2
+4
+>>> "Hello,"+ "there!"
+'Hello,there!'
+>>> first_name = "Miss"
+>>> first_name = "Miss"; last_name = "Piggy"; first_name+last_name
+'MissPiggy'
+>>> 

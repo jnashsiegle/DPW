@@ -1,0 +1,974 @@
+Last login: Mon Sep 28 21:33:07 on ttys000
+Janas-MacBook-Pro:~ janasiegle$ dir
+-bash: dir: command not found
+Janas-MacBook-Pro:~ janasiegle$ ls
+Applications			Library
+Books				Movies
+Creative Cloud Files		Music
+Creative Cloud Files (unknown)	NetBeansProjects
+Desktop				Pictures
+Documents			Public
+Downloads			VirtualBox VMs
+Dropbox
+Janas-MacBook-Pro:~ janasiegle$ ../
+-bash: ../: is a directory
+Janas-MacBook-Pro:~ janasiegle$ ..
+-bash: ..: command not found
+Janas-MacBook-Pro:~ janasiegle$ .
+-bash: .: filename argument required
+.: usage: . filename [arguments]
+Janas-MacBook-Pro:~ janasiegle$ l
+-bash: l: command not found
+Janas-MacBook-Pro:~ janasiegle$ ls
+Applications			Library
+Books				Movies
+Creative Cloud Files		Music
+Creative Cloud Files (unknown)	NetBeansProjects
+Desktop				Pictures
+Documents			Public
+Downloads			VirtualBox VMs
+Dropbox
+Janas-MacBook-Pro:~ janasiegle$ cd NetBeansProjects/
+Janas-MacBook-Pro:NetBeansProjects janasiegle$ ls
+dashboard
+Janas-MacBook-Pro:NetBeansProjects janasiegle$ cd ..
+Janas-MacBook-Pro:~ janasiegle$ cd ..
+Janas-MacBook-Pro:Users janasiegle$ ls
+Guest		Shared		janasiegle
+Janas-MacBook-Pro:Users janasiegle$ cd ..
+Janas-MacBook-Pro:/ janasiegle$ ls
+?				home
+Applications			installer.failurerequests
+Library				net
+Network				private
+System				sbin
+Users				tmp
+Volumes				tmp.AdxRvN
+bin				tmp.uqCnOO
+cores				usr
+dev				var
+etc
+Janas-MacBook-Pro:/ janasiegle$ cd usr
+Janas-MacBook-Pro:usr janasiegle$ ls
+X11		include		local		standalone
+X11R6		lib		sbin
+bin		libexec		share
+Janas-MacBook-Pro:usr janasiegle$ cd ..
+Janas-MacBook-Pro:/ janasiegle$ ls
+?				home
+Applications			installer.failurerequests
+Library				net
+Network				private
+System				sbin
+Users				tmp
+Volumes				tmp.AdxRvN
+bin				tmp.uqCnOO
+cores				usr
+dev				var
+etc
+Janas-MacBook-Pro:/ janasiegle$ cd home
+Janas-MacBook-Pro:home janasiegle$ ls
+Janas-MacBook-Pro:home janasiegle$ ls
+Janas-MacBook-Pro:home janasiegle$ cd ..
+Janas-MacBook-Pro:/ janasiegle$ ls
+?				home
+Applications			installer.failurerequests
+Library				net
+Network				private
+System				sbin
+Users				tmp
+Volumes				tmp.AdxRvN
+bin				tmp.uqCnOO
+cores				usr
+dev				var
+etc
+Janas-MacBook-Pro:/ janasiegle$ cd Users
+Janas-MacBook-Pro:Users janasiegle$ ls
+Guest		Shared		janasiegle
+Janas-MacBook-Pro:Users janasiegle$ cd janasiegle
+Janas-MacBook-Pro:~ janasiegle$ ls
+Applications			Library
+Books				Movies
+Creative Cloud Files		Music
+Creative Cloud Files (unknown)	NetBeansProjects
+Desktop				Pictures
+Documents			Public
+Downloads			VirtualBox VMs
+Dropbox
+Janas-MacBook-Pro:~ janasiegle$ cd applications
+Janas-MacBook-Pro:applications janasiegle$ ls
+Chrome Apps.localized		SecureDownloadManager.log
+SecureDownloadManager.app
+Janas-MacBook-Pro:applications janasiegle$ ls
+Chrome Apps.localized		SecureDownloadManager.log
+SecureDownloadManager.app
+Janas-MacBook-Pro:applications janasiegle$ cd ..
+Janas-MacBook-Pro:~ janasiegle$ ls
+Applications			Library
+Books				Movies
+Creative Cloud Files		Music
+Creative Cloud Files (unknown)	NetBeansProjects
+Desktop				Pictures
+Documents			Public
+Downloads			VirtualBox VMs
+Dropbox
+Janas-MacBook-Pro:~ janasiegle$ cd Applications
+Janas-MacBook-Pro:Applications janasiegle$ ls
+Chrome Apps.localized		SecureDownloadManager.log
+SecureDownloadManager.app
+Janas-MacBook-Pro:Applications janasiegle$ ls la
+ls: la: No such file or directory
+Janas-MacBook-Pro:Applications janasiegle$ ls all
+ls: all: No such file or directory
+Janas-MacBook-Pro:Applications janasiegle$ ls -a
+.				Chrome Apps.localized
+..				SecureDownloadManager.app
+.DS_Store			SecureDownloadManager.log
+.localized
+Janas-MacBook-Pro:Applications janasiegle$ ls -la
+total 24
+drwx------   7 janasiegle  staff   238 Jan 20  2015 .
+drwxr-xr-x+ 36 janasiegle  staff  1224 Sep 10 09:46 ..
+-rw-r--r--@  1 janasiegle  staff  6148 Sep 16 15:44 .DS_Store
+-rw-r-----@  1 janasiegle  staff     0 Dec  6  2014 .localized
+drwx------@  6 janasiegle  staff   204 Apr 18 19:01 Chrome Apps.localized
+drwxr-xr-x   3 janasiegle  staff   102 Dec  6  2014 SecureDownloadManager.app
+-rw-r--r--   1 janasiegle  staff   489 Dec  6  2014 SecureDownloadManager.log
+Janas-MacBook-Pro:Applications janasiegle$ cd ..
+Janas-MacBook-Pro:~ janasiegle$ ls
+Applications			Library
+Books				Movies
+Creative Cloud Files		Music
+Creative Cloud Files (unknown)	NetBeansProjects
+Desktop				Pictures
+Documents			Public
+Downloads			VirtualBox VMs
+Dropbox
+Janas-MacBook-Pro:~ janasiegle$ cd /Applications
+Janas-MacBook-Pro:Applications janasiegle$ cd MAMP
+Janas-MacBook-Pro:MAMP janasiegle$ l
+-bash: l: command not found
+Janas-MacBook-Pro:MAMP janasiegle$ ls
+Icon?				conf
+LEAME.rtf			db
+LIESMICH.rtf			fcgi-bin
+LISEZ-MOI.rtf			htdocs
+Library				licences
+MAMP.app			logs
+README.rtf			tmp
+Sequel Pro.app			прочти.rtf
+bin				お読みください.rtf
+cgi-bin
+Janas-MacBook-Pro:MAMP janasiegle$ cd htdocs
+Janas-MacBook-Pro:htdocs janasiegle$ l
+-bash: l: command not found
+Janas-MacBook-Pro:htdocs janasiegle$ ls
+DPW		NSS		e-port
+LightPoint	Practice	horizontal
+Janas-MacBook-Pro:htdocs janasiegle$ cd DPW
+Janas-MacBook-Pro:DPW janasiegle$ ls
+README.md			Using Python with Terminal
+Janas-MacBook-Pro:DPW janasiegle$ mkdir Intro to Python
+Janas-MacBook-Pro:DPW janasiegle$ ls
+Intro				Using Python with Terminal
+Python				to
+README.md
+Janas-MacBook-Pro:DPW janasiegle$ ls -la
+total 32
+drwxr-xr-x   9 janasiegle  admin   306 Sep 28 21:46 .
+drwxrwxr-x   9 janasiegle  admin   306 Sep 28 18:15 ..
+-rw-r--r--@  1 janasiegle  admin  6148 Sep 28 21:45 .DS_Store
+drwxr-xr-x  13 janasiegle  admin   442 Sep 28 18:15 .git
+drwxr-xr-x   2 janasiegle  admin    68 Sep 28 21:46 Intro
+drwxr-xr-x   2 janasiegle  admin    68 Sep 28 21:46 Python
+-rw-r--r--   1 janasiegle  admin    57 Sep 28 18:15 README.md
+-rw-r--r--@  1 janasiegle  admin   485 Sep 28 21:36 Using Python with Terminal
+drwxr-xr-x   2 janasiegle  admin    68 Sep 28 21:46 to
+Janas-MacBook-Pro:DPW janasiegle$ cd Intro
+Janas-MacBook-Pro:Intro janasiegle$ cd ..
+Janas-MacBook-Pro:DPW janasiegle$ cd Python
+Janas-MacBook-Pro:Python janasiegle$ ls
+Janas-MacBook-Pro:Python janasiegle$ ls -la
+total 0
+drwxr-xr-x  2 janasiegle  admin   68 Sep 28 21:46 .
+drwxr-xr-x  9 janasiegle  admin  306 Sep 28 21:46 ..
+Janas-MacBook-Pro:Python janasiegle$ cd ..
+Janas-MacBook-Pro:DPW janasiegle$ rmdir Python
+Janas-MacBook-Pro:DPW janasiegle$ mv Python Intro_to_Python
+mv: rename Python to Intro_to_Python: No such file or directory
+Janas-MacBook-Pro:DPW janasiegle$ ls
+Intro				Using Python with Terminal
+README.md			to
+Janas-MacBook-Pro:DPW janasiegle$ mv Intro Intro_to_Python
+Janas-MacBook-Pro:DPW janasiegle$ ls
+Intro_to_Python			Using Python with Terminal
+README.md			to
+Janas-MacBook-Pro:DPW janasiegle$ cd ..
+Janas-MacBook-Pro:htdocs janasiegle$ /Applications/MAMP/htdocs/DPW/Intro_to_Python ls -la
+-bash: /Applications/MAMP/htdocs/DPW/Intro_to_Python: is a directory
+Janas-MacBook-Pro:htdocs janasiegle$ ls
+DPW		NSS		e-port
+LightPoint	Practice	horizontal
+Janas-MacBook-Pro:htdocs janasiegle$ cd DPW
+Janas-MacBook-Pro:DPW janasiegle$ l
+-bash: l: command not found
+Janas-MacBook-Pro:DPW janasiegle$ ls
+Intro_to_Python			Using Python with Terminal
+README.md			to
+Janas-MacBook-Pro:DPW janasiegle$ ls
+Intro_to_Python			Using Python with Terminal
+README.md			to
+Janas-MacBook-Pro:DPW janasiegle$ cd Intro_to_Python/
+Janas-MacBook-Pro:Intro_to_Python janasiegle$ ls
+main.py
+Janas-MacBook-Pro:Intro_to_Python janasiegle$ python main.py
+hello world
+Janas-MacBook-Pro:Intro_to_Python janasiegle$ python main.py
+hello world
+Janas-MacBook-Pro:Intro_to_Python janasiegle$ python main.py
+hello world
+Kermit
+Janas-MacBook-Pro:Intro_to_Python janasiegle$ python main.py
+hello world
+Kermit
+Enter your nameKermit
+Janas-MacBook-Pro:Intro_to_Python janasiegle$ python main.py
+hello world
+Kermit
+Enter your name:  Kermit
+Kermit
+Janas-MacBook-Pro:Intro_to_Python janasiegle$ python main.py
+hello world
+Kermit
+Enter your name:  Kermit
+Hello there Kermit
+Janas-MacBook-Pro:Intro_to_Python janasiegle$ python main.py
+hello world
+Kermit
+Enter your name:  kermit
+Hello there, kermit !
+Janas-MacBook-Pro:Intro_to_Python janasiegle$ python main.py
+hello world
+Kermit
+Enter your name:  Kermit
+Hello there, Kermit !
+Janas-MacBook-Pro:Intro_to_Python janasiegle$ python main.py
+hello world
+Kermit
+Enter your name:  Jana
+Hello there, Jana !
+Janas-MacBook-Pro:Intro_to_Python janasiegle$ python main.py
+hello world
+Kermit
+50
+Janas-MacBook-Pro:Intro_to_Python janasiegle$ python main.py
+hello world
+Kermit
+Traceback (most recent call last):
+  File "main.py", line 21, in <module>
+    print "You are " + age + " years old"
+TypeError: cannot concatenate 'str' and 'int' objects
+Janas-MacBook-Pro:Intro_to_Python janasiegle$ python main.py
+hello world
+Kermit
+You are 50 years old
+Janas-MacBook-Pro:Intro_to_Python janasiegle$ python main.py
+  File "main.py", line 31
+    print "Yay! We can buy cool " + brand "shoes!"
+                                                 ^
+SyntaxError: invalid syntax
+Janas-MacBook-Pro:Intro_to_Python janasiegle$ python main.py
+hello world
+Kermit
+You are 50 years old
+Yay! We can buy cool nikeshoes!
+Janas-MacBook-Pro:Intro_to_Python janasiegle$ python main.py
+hello world
+Kermit
+You are 50 years old
+Yay! We can buy cool nike shoes!
+Janas-MacBook-Pro:Intro_to_Python janasiegle$ python main.py
+hello world
+Kermit
+You are 50 years old
+No cool shoes for me.
+Janas-MacBook-Pro:Intro_to_Python janasiegle$ python main.py
+hello world
+Kermit
+You are 50 years old
+We can at least get some generic sneakers.
+Janas-MacBook-Pro:Intro_to_Python janasiegle$ python main.py
+hello world
+Kermit
+You are 50 years old
+We can at least get some generic sneakers.
+Janas-MacBook-Pro:Intro_to_Python janasiegle$ python main.py
+hello world
+Kermit
+You are 50 years old
+We can at least get some generic sneakers.
+['leia', 'luke', 'chewy', 'lando']
+Janas-MacBook-Pro:Intro_to_Python janasiegle$ python main.py
+hello world
+Kermit
+You are 50 years old
+We can at least get some generic sneakers.
+['leia', 'luke', 'chewy', 'lando', 'obi wan']
+Janas-MacBook-Pro:Intro_to_Python janasiegle$ python main.py
+hello world
+Kermit
+You are 50 years old
+We can at least get some generic sneakers.
+['leia', 'luke', 'chewy', 'lando', 'obi wan']
+luke
+Janas-MacBook-Pro:Intro_to_Python janasiegle$ python main.py
+  File "main.py", line 65
+    }
+    ^
+SyntaxError: invalid syntax
+Janas-MacBook-Pro:Intro_to_Python janasiegle$ python main.py
+hello world
+Kermit
+You are 50 years old
+We can at least get some generic sneakers.
+['leia', 'luke', 'chewy', 'lando', 'obi wan']
+luke
+Darth Vader
+Janas-MacBook-Pro:Intro_to_Python janasiegle$ python main.py
+hello world
+Kermit
+You are 50 years old
+We can at least get some generic sneakers.
+['leia', 'luke', 'chewy', 'lando', 'obi wan']
+luke
+Darth Vader
+The count is 0
+The count is 1
+The count is 2
+The count is 3
+The count is 4
+The count is 5
+The count is 6
+The count is 7
+The count is 8
+Janas-MacBook-Pro:Intro_to_Python janasiegle$ python main.py
+  File "main.py", line 69
+    print "The count is", i ".  Obviously less than 9."
+                                                      ^
+SyntaxError: invalid syntax
+Janas-MacBook-Pro:Intro_to_Python janasiegle$ python main.py
+  File "main.py", line 74
+    for i in range(0,10)
+                       ^
+SyntaxError: invalid syntax
+Janas-MacBook-Pro:Intro_to_Python janasiegle$ python main.py
+  File "main.py", line 75
+    print "The count is", i
+        ^
+IndentationError: expected an indented block
+Janas-MacBook-Pro:Intro_to_Python janasiegle$ python main.py
+hello world
+Kermit
+You are 50 years old
+We can at least get some generic sneakers.
+['leia', 'luke', 'chewy', 'lando', 'obi wan']
+luke
+Darth Vader
+The count is
+Traceback (most recent call last):
+  File "main.py", line 69, in <module>
+    print "The count is", i  + ".  Obviously less than 9."
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+Janas-MacBook-Pro:Intro_to_Python janasiegle$ python main.py
+hello world
+Kermit
+You are 50 years old
+We can at least get some generic sneakers.
+['leia', 'luke', 'chewy', 'lando', 'obi wan']
+luke
+Darth Vader
+The count is
+Traceback (most recent call last):
+  File "main.py", line 69, in <module>
+    print "The count is", i  + ".  Obviously less than int(9)."
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+Janas-MacBook-Pro:Intro_to_Python janasiegle$ python main.py
+hello world
+Kermit
+You are 50 years old
+We can at least get some generic sneakers.
+['leia', 'luke', 'chewy', 'lando', 'obi wan']
+luke
+Darth Vader
+The count is 0 .  Obviously less than 9.
+The count is 1 .  Obviously less than 9.
+The count is 2 .  Obviously less than 9.
+The count is 3 .  Obviously less than 9.
+The count is 4 .  Obviously less than 9.
+The count is 5 .  Obviously less than 9.
+The count is 6 .  Obviously less than 9.
+The count is 7 .  Obviously less than 9.
+The count is 8 .  Obviously less than 9.
+The count is 0
+The count is 1
+The count is 2
+The count is 3
+The count is 4
+The count is 5
+The count is 6
+The count is 7
+The count is 8
+The count is 9
+Janas-MacBook-Pro:Intro_to_Python janasiegle$ python main.py
+hello world
+Kermit
+You are 50 years old
+We can at least get some generic sneakers.
+['leia', 'luke', 'chewy', 'lando', 'obi wan']
+luke
+Darth Vader
+The count is 0 .  Obviously less than 9.
+The count is 1 .  Obviously less than 9.
+The count is 2 .  Obviously less than 9.
+The count is 3 .  Obviously less than 9.
+The count is 4 .  Obviously less than 9.
+The count is 5 .  Obviously less than 9.
+The count is 6 .  Obviously less than 9.
+The count is 7 .  Obviously less than 9.
+The count is 8 .  Obviously less than 9.
+The count is 0 .  Between 0 and 10.
+The count is 1 .  Between 0 and 10.
+The count is 2 .  Between 0 and 10.
+The count is 3 .  Between 0 and 10.
+The count is 4 .  Between 0 and 10.
+The count is 5 .  Between 0 and 10.
+The count is 6 .  Between 0 and 10.
+The count is 7 .  Between 0 and 10.
+The count is 8 .  Between 0 and 10.
+The count is 9 .  Between 0 and 10.
+Janas-MacBook-Pro:Intro_to_Python janasiegle$ python main.py
+hello world
+Kermit
+You are 50 years old
+We can at least get some generic sneakers.
+['leia', 'luke', 'chewy', 'lando', 'obi wan']
+luke
+Darth Vader
+The count is 0 .  Obviously less than 9.
+The count is 1 .  Obviously less than 9.
+The count is 2 .  Obviously less than 9.
+The count is 3 .  Obviously less than 9.
+The count is 4 .  Obviously less than 9.
+The count is 5 .  Obviously less than 9.
+The count is 6 .  Obviously less than 9.
+The count is 7 .  Obviously less than 9.
+The count is 8 .  Obviously less than 9.
+The count is 0 .  Between 0 and 10.
+The count is 1 .  Between 0 and 10.
+The count is 2 .  Between 0 and 10.
+The count is 3 .  Between 0 and 10.
+The count is 4 .  Between 0 and 10.
+The count is 5 .  Between 0 and 10.
+The count is 6 .  Between 0 and 10.
+The count is 7 .  Between 0 and 10.
+The count is 8 .  Between 0 and 10.
+The count is 9 .  Between 0 and 10.
+Tupac
+Nas
+Biggie Smalls
+Janas-MacBook-Pro:Intro_to_Python janasiegle$ python main.py
+  File "main.py", line 82
+    print "One of the best rappers is" r
+                                       ^
+SyntaxError: invalid syntax
+Janas-MacBook-Pro:Intro_to_Python janasiegle$ 
+Janas-MacBook-Pro:Intro_to_Python janasiegle$ python main.py
+hello world
+Kermit
+You are 50 years old
+We can at least get some generic sneakers.
+['leia', 'luke', 'chewy', 'lando', 'obi wan']
+luke
+Darth Vader
+The count is 0 .  Obviously less than 9.
+The count is 1 .  Obviously less than 9.
+The count is 2 .  Obviously less than 9.
+The count is 3 .  Obviously less than 9.
+The count is 4 .  Obviously less than 9.
+The count is 5 .  Obviously less than 9.
+The count is 6 .  Obviously less than 9.
+The count is 7 .  Obviously less than 9.
+The count is 8 .  Obviously less than 9.
+The count is 0 .  Between 0 and 10.
+The count is 1 .  Between 0 and 10.
+The count is 2 .  Between 0 and 10.
+The count is 3 .  Between 0 and 10.
+The count is 4 .  Between 0 and 10.
+The count is 5 .  Between 0 and 10.
+The count is 6 .  Between 0 and 10.
+The count is 7 .  Between 0 and 10.
+The count is 8 .  Between 0 and 10.
+The count is 9 .  Between 0 and 10.
+One of the best rappers isTupac
+One of the best rappers isNas
+One of the best rappers isBiggie Smalls
+Janas-MacBook-Pro:Intro_to_Python janasiegle$ python main.py
+hello world
+Kermit
+You are 50 years old
+We can at least get some generic sneakers.
+['leia', 'luke', 'chewy', 'lando', 'obi wan']
+luke
+Darth Vader
+The count is 0 .  Obviously less than 9.
+The count is 1 .  Obviously less than 9.
+The count is 2 .  Obviously less than 9.
+The count is 3 .  Obviously less than 9.
+The count is 4 .  Obviously less than 9.
+The count is 5 .  Obviously less than 9.
+The count is 6 .  Obviously less than 9.
+The count is 7 .  Obviously less than 9.
+The count is 8 .  Obviously less than 9.
+The count is 0 .  Between 0 and 10.
+The count is 1 .  Between 0 and 10.
+The count is 2 .  Between 0 and 10.
+The count is 3 .  Between 0 and 10.
+The count is 4 .  Between 0 and 10.
+The count is 5 .  Between 0 and 10.
+The count is 6 .  Between 0 and 10.
+The count is 7 .  Between 0 and 10.
+The count is 8 .  Between 0 and 10.
+The count is 9 .  Between 0 and 10.
+One of the best rappers is Tupac
+One of the best rappers is Nas
+One of the best rappers is Biggie Smalls
+Janas-MacBook-Pro:Intro_to_Python janasiegle$ python main.py
+  File "main.py", line 90
+    calcArea(20, 40):  #lets call the function/invoke
+                    ^
+SyntaxError: invalid syntax
+Janas-MacBook-Pro:Intro_to_Python janasiegle$ python main.py
+  File "main.py", line 90
+    calcArea(20, 40):  #lets call the function/invoke
+                    ^
+SyntaxError: invalid syntax
+Janas-MacBook-Pro:Intro_to_Python janasiegle$ python main.py
+  File "main.py", line 90
+    calcArea(20, 40):
+                    ^
+SyntaxError: invalid syntax
+Janas-MacBook-Pro:Intro_to_Python janasiegle$ python main.py
+hello world
+Kermit
+You are 50 years old
+We can at least get some generic sneakers.
+['leia', 'luke', 'chewy', 'lando', 'obi wan']
+luke
+Darth Vader
+The count is 0 .  Obviously less than 9.
+The count is 1 .  Obviously less than 9.
+The count is 2 .  Obviously less than 9.
+The count is 3 .  Obviously less than 9.
+The count is 4 .  Obviously less than 9.
+The count is 5 .  Obviously less than 9.
+The count is 6 .  Obviously less than 9.
+The count is 7 .  Obviously less than 9.
+The count is 8 .  Obviously less than 9.
+The count is 0 .  Between 0 and 10.
+The count is 1 .  Between 0 and 10.
+The count is 2 .  Between 0 and 10.
+The count is 3 .  Between 0 and 10.
+The count is 4 .  Between 0 and 10.
+The count is 5 .  Between 0 and 10.
+The count is 6 .  Between 0 and 10.
+The count is 7 .  Between 0 and 10.
+The count is 8 .  Between 0 and 10.
+The count is 9 .  Between 0 and 10.
+One of the best rappers is Tupac
+One of the best rappers is Nas
+One of the best rappers is Biggie Smalls
+Janas-MacBook-Pro:Intro_to_Python janasiegle$ python main.py
+hello world
+Kermit
+You are 50 years old
+We can at least get some generic sneakers.
+['leia', 'luke', 'chewy', 'lando', 'obi wan']
+luke
+Darth Vader
+The count is 0 .  Obviously less than 9.
+The count is 1 .  Obviously less than 9.
+The count is 2 .  Obviously less than 9.
+The count is 3 .  Obviously less than 9.
+The count is 4 .  Obviously less than 9.
+The count is 5 .  Obviously less than 9.
+The count is 6 .  Obviously less than 9.
+The count is 7 .  Obviously less than 9.
+The count is 8 .  Obviously less than 9.
+The count is 0 .  Between 0 and 10.
+The count is 1 .  Between 0 and 10.
+The count is 2 .  Between 0 and 10.
+The count is 3 .  Between 0 and 10.
+The count is 4 .  Between 0 and 10.
+The count is 5 .  Between 0 and 10.
+The count is 6 .  Between 0 and 10.
+The count is 7 .  Between 0 and 10.
+The count is 8 .  Between 0 and 10.
+The count is 9 .  Between 0 and 10.
+One of the best rappers is Tupac
+One of the best rappers is Nas
+One of the best rappers is Biggie Smalls
+Janas-MacBook-Pro:Intro_to_Python janasiegle$ python main.py
+hello world
+Kermit
+You are 50 years old
+We can at least get some generic sneakers.
+['leia', 'luke', 'chewy', 'lando', 'obi wan']
+luke
+Darth Vader
+The count is 0 .  Obviously less than 9.
+The count is 1 .  Obviously less than 9.
+The count is 2 .  Obviously less than 9.
+The count is 3 .  Obviously less than 9.
+The count is 4 .  Obviously less than 9.
+The count is 5 .  Obviously less than 9.
+The count is 6 .  Obviously less than 9.
+The count is 7 .  Obviously less than 9.
+The count is 8 .  Obviously less than 9.
+The count is 0 .  Between 0 and 10.
+The count is 1 .  Between 0 and 10.
+The count is 2 .  Between 0 and 10.
+The count is 3 .  Between 0 and 10.
+The count is 4 .  Between 0 and 10.
+The count is 5 .  Between 0 and 10.
+The count is 6 .  Between 0 and 10.
+The count is 7 .  Between 0 and 10.
+The count is 8 .  Between 0 and 10.
+The count is 9 .  Between 0 and 10.
+One of the best rappers is Tupac
+One of the best rappers is Nas
+One of the best rappers is Biggie Smalls
+Janas-MacBook-Pro:Intro_to_Python janasiegle$ python main.py
+hello world
+Kermit
+You are 50 years old
+We can at least get some generic sneakers.
+['leia', 'luke', 'chewy', 'lando', 'obi wan']
+luke
+Darth Vader
+The count is 0 .  Obviously less than 9.
+The count is 1 .  Obviously less than 9.
+The count is 2 .  Obviously less than 9.
+The count is 3 .  Obviously less than 9.
+The count is 4 .  Obviously less than 9.
+The count is 5 .  Obviously less than 9.
+The count is 6 .  Obviously less than 9.
+The count is 7 .  Obviously less than 9.
+The count is 8 .  Obviously less than 9.
+The count is 0 .  Between 0 and 10.
+The count is 1 .  Between 0 and 10.
+The count is 2 .  Between 0 and 10.
+The count is 3 .  Between 0 and 10.
+The count is 4 .  Between 0 and 10.
+The count is 5 .  Between 0 and 10.
+The count is 6 .  Between 0 and 10.
+The count is 7 .  Between 0 and 10.
+The count is 8 .  Between 0 and 10.
+The count is 9 .  Between 0 and 10.
+One of the best rappers is Tupac
+One of the best rappers is Nas
+One of the best rappers is Biggie Smalls
+Traceback (most recent call last):
+  File "main.py", line 92, in <module>
+    calcArea(20, 40);
+  File "main.py", line 88, in calcArea
+    print "The area is " + area
+TypeError: cannot concatenate 'str' and 'int' objects
+Janas-MacBook-Pro:Intro_to_Python janasiegle$ python main.py
+hello world
+Kermit
+You are 50 years old
+We can at least get some generic sneakers.
+['leia', 'luke', 'chewy', 'lando', 'obi wan']
+luke
+Darth Vader
+The count is 0 .  Obviously less than 9.
+The count is 1 .  Obviously less than 9.
+The count is 2 .  Obviously less than 9.
+The count is 3 .  Obviously less than 9.
+The count is 4 .  Obviously less than 9.
+The count is 5 .  Obviously less than 9.
+The count is 6 .  Obviously less than 9.
+The count is 7 .  Obviously less than 9.
+The count is 8 .  Obviously less than 9.
+The count is 0 .  Between 0 and 10.
+The count is 1 .  Between 0 and 10.
+The count is 2 .  Between 0 and 10.
+The count is 3 .  Between 0 and 10.
+The count is 4 .  Between 0 and 10.
+The count is 5 .  Between 0 and 10.
+The count is 6 .  Between 0 and 10.
+The count is 7 .  Between 0 and 10.
+The count is 8 .  Between 0 and 10.
+The count is 9 .  Between 0 and 10.
+One of the best rappers is Tupac
+One of the best rappers is Nas
+One of the best rappers is Biggie Smalls
+800
+Janas-MacBook-Pro:Intro_to_Python janasiegle$ python main.py
+  File "main.py", line 93
+    a = calcArea(20, 40);
+                        ^
+IndentationError: unindent does not match any outer indentation level
+Janas-MacBook-Pro:Intro_to_Python janasiegle$ python main.py
+  File "main.py", line 93
+    a = calcArea(20, 40);
+                        ^
+IndentationError: unindent does not match any outer indentation level
+Janas-MacBook-Pro:Intro_to_Python janasiegle$ python main.py
+  File "main.py", line 94
+    print a
+    ^
+IndentationError: unexpected indent
+Janas-MacBook-Pro:Intro_to_Python janasiegle$ python main.py
+hello world
+Kermit
+You are 50 years old
+We can at least get some generic sneakers.
+['leia', 'luke', 'chewy', 'lando', 'obi wan']
+luke
+Darth Vader
+The count is 0 .  Obviously less than 9.
+The count is 1 .  Obviously less than 9.
+The count is 2 .  Obviously less than 9.
+The count is 3 .  Obviously less than 9.
+The count is 4 .  Obviously less than 9.
+The count is 5 .  Obviously less than 9.
+The count is 6 .  Obviously less than 9.
+The count is 7 .  Obviously less than 9.
+The count is 8 .  Obviously less than 9.
+The count is 0 .  Between 0 and 10.
+The count is 1 .  Between 0 and 10.
+The count is 2 .  Between 0 and 10.
+The count is 3 .  Between 0 and 10.
+The count is 4 .  Between 0 and 10.
+The count is 5 .  Between 0 and 10.
+The count is 6 .  Between 0 and 10.
+The count is 7 .  Between 0 and 10.
+The count is 8 .  Between 0 and 10.
+The count is 9 .  Between 0 and 10.
+One of the best rappers is Tupac
+One of the best rappers is Nas
+One of the best rappers is Biggie Smalls
+Janas-MacBook-Pro:Intro_to_Python janasiegle$ python main.py
+hello world
+Kermit
+You are 50 years old
+We can at least get some generic sneakers.
+['leia', 'luke', 'chewy', 'lando', 'obi wan']
+luke
+Darth Vader
+The count is 0 .  Obviously less than 9.
+The count is 1 .  Obviously less than 9.
+The count is 2 .  Obviously less than 9.
+The count is 3 .  Obviously less than 9.
+The count is 4 .  Obviously less than 9.
+The count is 5 .  Obviously less than 9.
+The count is 6 .  Obviously less than 9.
+The count is 7 .  Obviously less than 9.
+The count is 8 .  Obviously less than 9.
+The count is 0 .  Between 0 and 10.
+The count is 1 .  Between 0 and 10.
+The count is 2 .  Between 0 and 10.
+The count is 3 .  Between 0 and 10.
+The count is 4 .  Between 0 and 10.
+The count is 5 .  Between 0 and 10.
+The count is 6 .  Between 0 and 10.
+The count is 7 .  Between 0 and 10.
+The count is 8 .  Between 0 and 10.
+The count is 9 .  Between 0 and 10.
+One of the best rappers is Tupac
+One of the best rappers is Nas
+One of the best rappers is Biggie Smalls
+Janas-MacBook-Pro:Intro_to_Python janasiegle$ python main.py
+hello world
+Kermit
+You are 50 years old
+We can at least get some generic sneakers.
+['leia', 'luke', 'chewy', 'lando', 'obi wan']
+luke
+Darth Vader
+The count is 0 .  Obviously less than 9.
+The count is 1 .  Obviously less than 9.
+The count is 2 .  Obviously less than 9.
+The count is 3 .  Obviously less than 9.
+The count is 4 .  Obviously less than 9.
+The count is 5 .  Obviously less than 9.
+The count is 6 .  Obviously less than 9.
+The count is 7 .  Obviously less than 9.
+The count is 8 .  Obviously less than 9.
+The count is 0 .  Between 0 and 10.
+The count is 1 .  Between 0 and 10.
+The count is 2 .  Between 0 and 10.
+The count is 3 .  Between 0 and 10.
+The count is 4 .  Between 0 and 10.
+The count is 5 .  Between 0 and 10.
+The count is 6 .  Between 0 and 10.
+The count is 7 .  Between 0 and 10.
+The count is 8 .  Between 0 and 10.
+The count is 9 .  Between 0 and 10.
+One of the best rappers is Tupac
+One of the best rappers is Nas
+One of the best rappers is Biggie Smalls
+Janas-MacBook-Pro:Intro_to_Python janasiegle$ python main.py
+hello world
+Kermit
+You are 50 years old
+We can at least get some generic sneakers.
+['leia', 'luke', 'chewy', 'lando', 'obi wan']
+luke
+Darth Vader
+The count is 0 .  Obviously less than 9.
+The count is 1 .  Obviously less than 9.
+The count is 2 .  Obviously less than 9.
+The count is 3 .  Obviously less than 9.
+The count is 4 .  Obviously less than 9.
+The count is 5 .  Obviously less than 9.
+The count is 6 .  Obviously less than 9.
+The count is 7 .  Obviously less than 9.
+The count is 8 .  Obviously less than 9.
+The count is 0 .  Between 0 and 10.
+The count is 1 .  Between 0 and 10.
+The count is 2 .  Between 0 and 10.
+The count is 3 .  Between 0 and 10.
+The count is 4 .  Between 0 and 10.
+The count is 5 .  Between 0 and 10.
+The count is 6 .  Between 0 and 10.
+The count is 7 .  Between 0 and 10.
+The count is 8 .  Between 0 and 10.
+The count is 9 .  Between 0 and 10.
+One of the best rappers is Tupac
+One of the best rappers is Nas
+One of the best rappers is Biggie Smalls
+Janas-MacBook-Pro:Intro_to_Python janasiegle$ python main.py
+  File "main.py", line 90
+    a = calcArea(20, 40);
+                        ^
+IndentationError: unindent does not match any outer indentation level
+Janas-MacBook-Pro:Intro_to_Python janasiegle$ python main.py
+  File "main.py", line 90
+    a = calcArea(20, 40);
+                        ^
+IndentationError: unindent does not match any outer indentation level
+Janas-MacBook-Pro:Intro_to_Python janasiegle$ python main.py
+  File "main.py", line 91
+    print "My area is " + str(a) + "sq ft"
+    ^
+IndentationError: unexpected indent
+Janas-MacBook-Pro:Intro_to_Python janasiegle$ python main.py
+hello world
+Kermit
+You are 50 years old
+We can at least get some generic sneakers.
+['leia', 'luke', 'chewy', 'lando', 'obi wan']
+luke
+Darth Vader
+The count is 0 .  Obviously less than 9.
+The count is 1 .  Obviously less than 9.
+The count is 2 .  Obviously less than 9.
+The count is 3 .  Obviously less than 9.
+The count is 4 .  Obviously less than 9.
+The count is 5 .  Obviously less than 9.
+The count is 6 .  Obviously less than 9.
+The count is 7 .  Obviously less than 9.
+The count is 8 .  Obviously less than 9.
+The count is 0 .  Between 0 and 10.
+The count is 1 .  Between 0 and 10.
+The count is 2 .  Between 0 and 10.
+The count is 3 .  Between 0 and 10.
+The count is 4 .  Between 0 and 10.
+The count is 5 .  Between 0 and 10.
+The count is 6 .  Between 0 and 10.
+The count is 7 .  Between 0 and 10.
+The count is 8 .  Between 0 and 10.
+The count is 9 .  Between 0 and 10.
+One of the best rappers is Tupac
+One of the best rappers is Nas
+One of the best rappers is Biggie Smalls
+My area is 800sq ft
+Janas-MacBook-Pro:Intro_to_Python janasiegle$ python main.py
+hello world
+Kermit
+You are 50 years old
+We can at least get some generic sneakers.
+['leia', 'luke', 'chewy', 'lando', 'obi wan']
+luke
+Darth Vader
+The count is 0 .  Obviously less than 9.
+The count is 1 .  Obviously less than 9.
+The count is 2 .  Obviously less than 9.
+The count is 3 .  Obviously less than 9.
+The count is 4 .  Obviously less than 9.
+The count is 5 .  Obviously less than 9.
+The count is 6 .  Obviously less than 9.
+The count is 7 .  Obviously less than 9.
+The count is 8 .  Obviously less than 9.
+The count is 0 .  Between 0 and 10.
+The count is 1 .  Between 0 and 10.
+The count is 2 .  Between 0 and 10.
+The count is 3 .  Between 0 and 10.
+The count is 4 .  Between 0 and 10.
+The count is 5 .  Between 0 and 10.
+The count is 6 .  Between 0 and 10.
+The count is 7 .  Between 0 and 10.
+The count is 8 .  Between 0 and 10.
+The count is 9 .  Between 0 and 10.
+One of the best rappers is Tupac
+One of the best rappers is Nas
+One of the best rappers is Biggie Smalls
+
+Your height is 63 and your weight is 200
+
+Janas-MacBook-Pro:Intro_to_Python janasiegle$ python main.py
+hello world
+Kermit
+You are 50 years old
+We can at least get some generic sneakers.
+['leia', 'luke', 'chewy', 'lando', 'obi wan']
+luke
+Darth Vader
+The count is 0 .  Obviously less than 9.
+The count is 1 .  Obviously less than 9.
+The count is 2 .  Obviously less than 9.
+The count is 3 .  Obviously less than 9.
+The count is 4 .  Obviously less than 9.
+The count is 5 .  Obviously less than 9.
+The count is 6 .  Obviously less than 9.
+The count is 7 .  Obviously less than 9.
+The count is 8 .  Obviously less than 9.
+The count is 0 .  Between 0 and 10.
+The count is 1 .  Between 0 and 10.
+The count is 2 .  Between 0 and 10.
+The count is 3 .  Between 0 and 10.
+The count is 4 .  Between 0 and 10.
+The count is 5 .  Between 0 and 10.
+The count is 6 .  Between 0 and 10.
+The count is 7 .  Between 0 and 10.
+The count is 8 .  Between 0 and 10.
+The count is 9 .  Between 0 and 10.
+One of the best rappers is Tupac
+One of the best rappers is Nas
+One of the best rappers is Biggie Smalls
+
+Your height is 63 and your weight is 200
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Contact Us</title>
+	</head>
+	<body>
+		You can contact us at contact@us.com
+	</body>
+</html>
+
+
+Janas-MacBook-Pro:Intro_to_Python janasiegle$ 
