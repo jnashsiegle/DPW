@@ -30,33 +30,24 @@ cookies = raw_input(name+", Pick a number between 1-10? ") #need it to determine
 u_fruit = raw_input(name+", Choose one fruit, apple, lime or banana.  Please use all lowercase in your answer ") #let's use UI in order to pick the fruit for the color that will be used in the story!!
 fruit = dict()
 fruit = {"apple":"red", "lime":"green", "banana":"yellow"}  #what is more colorful than fruit?
-#print fruit[u_fruit]
+#print fruit[u_fruit] will be used to color the user's vehicle
 
 weight = raw_input(name+", How much do you weigh? ")  #we need a weight to use in our stone conversion
-
-weight = int(weight)		#turn our given weight back into an integer as the input made it a string
-
+weight = int(weight)		#turn our user given weight back into an integer as the input made it a string
 stone_weight = 0.0714285714 #stone weight to 1 pound
-
 def calcStone(stone_weight,weight): #calculate pound to stone
    x = stone_weight*weight
    floatx = int(x)		#let's remove the decimals later in the story
    return floatx						#return stone
 
 #print calcStone(stone_weight,weight) 
-
-#two sequence looping with zip function, questions and answers for dialog
-questions = ['decision', 'answer', 'favorite food'] #question nouns
-answers = ['yes', 'I think I shall', 'macaroni and cheese'] #answers REMEMBER TO ADD VERB IN STORY FOLLOWING I THINK I SHALL
-for q, a in zip(questions, answers): #for statement zip function
-		#print "What is your {0}? It is {1}. ".format(q, a) #formatting printing q a
 print "++++++++++++===================================++++++++++++++++++"
 print "++++++++++++===================================++++++++++++++++++"
 print "++++++++++++===================================++++++++++++++++++"
 print "++++++++++++===================================++++++++++++++++++"
 print "++++++++++++===================================++++++++++++++++++"
 print "++++++++++++===================================++++++++++++++++++"
-print "A Trip To the Store"
+print "A Trip To the Store" # title of our story
 
 print "     " + name+", would you " + verb + " to the store and pick up " + str(calcStone(stone_weight,weight)) + " pounds of flour so I can make " + dessert + " for " + meal + "?"
 print name + " grabs a/some " + color + " " + clothing + " to slip on while picking up the leash so the family " + animal + " named" + " " + friend + " could go along for the journey."
@@ -64,10 +55,10 @@ print "Hopping into the " + vehicle + " " + name + " calls " + players[3] + " " 
 print "Arriving at the bridge the troll guard demands the toll be paid."
 #I need if else results here to determine course of story
 
-if int(cookies) < 5:		#need str() to make an int again			#using if / else to determine if story uses bridge or ferry to get across
+if int(cookies) < 5:		#need str() to make an int again | using if / else to determine if story uses bridge or ferry to get across
 	print "'I refuse to pay the toll!' is the response.  'Then you must go down the river to the ferry, you may not use the bridge or air-space!'" + name + " proceeds down to the ferry."
 else:
-	if int(cookies) >= 5: #upon UI it's a str and it needs to be an int
+	if int(cookies) >= 5: #upon user entry it's a str and it needs to be an int
 		print "'I will gladly pay your toll, kind Sir!'" + name + " replies and is allowed to pass."
 
 print "     As the bridge becomes a small feature in the distance " + name + " finally finds " + players[3] + " who appears to be holding a small stone in his hand.  'What is that you have?,' " + name + " asks while reaching for the small object.  Hand jerking away a loud, if childish reply can be heard 'Do not touch! It is mine!'" + players[3] + " shouts out.  A collective sigh can be heard from all the other players, " + ', '.join(players) + " at this childish display."
@@ -86,6 +77,10 @@ answers = ['Strawberry Cake', ' hmmm, I honestly do not know', 'macaroni and che
 print "After a period of time, they arrive at the store and pick out the flour that was needed.  Larry all of a sudden gets all excited thinking about the upcoming treats and inundates " + name + " with questions, non-stop."
 for q, a in zip(questions, answers): #for statement zip function	
 	print "What is your {0}? It is {1}. ".format(q, a) #formatting printing q a  list out questions
+
+print "With a hand held high " + name + " interrupts " + players[3] + " hold on there big fella, why don't we just wait until we get home, give mom time to cook us up some yummy vittles and we can discuss this like the good cowpokes we are?, " + name + " replies with a laugh and fake accent.  With that the two head home and are treated to a wonderful " + meal + "."
+
+print "++========== THE END =========++"
 
 
 
