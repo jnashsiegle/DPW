@@ -1,7 +1,7 @@
 print "Welcome to Madlibs!  A fantasy world created by your words and imagination" #Welcome message
 
 name = response = raw_input ("What is your name?  ")  #get player name for use within game
-'''
+
 response = raw_input(name+", please pick a verb: ") #grab a verb to use in story
 
 response = raw_input("Please pick a noun: ")  #grab a noun
@@ -16,29 +16,52 @@ response = raw_input(name+", What article of clothing are you wearing right now:
 
 ran_num = response = raw_input("Choose a number between 1 and 100: ")#this number will be used to determine the end of the range a random number is generated from
 
-friend = response = raw_input("What is your favorite name, " +name +"? ")
+friend = response = raw_input("What is your favorite name, " +name +"? ") #lets add a name for another character
+
 from random import randint
 print(randint(0,int(ran_num))) #generate a random number
 
-players = ["Mike", "John", "Chris", "Larry", "Moe"]
+players = ["Mike", "John", "Chris", "Larry", "Moe"]  #and some friends or students
 players.append(friend)
 print players
 
 
+cookies = response = raw_input(name+", How many cookies in a baker's dozen? ") #how many know a baker's dozen
 
-response = raw_input(name+", How many cookies in a baker's dozen? ")
-
-even = response = raw_input("Quick!  What is the first even number you can think of? ")
+even = response = raw_input("Quick!  What is the first even number you can think of? ") #I just need an even number
 
 fruit = dict()
-fruit = {"apple":"red", "lime":"green", "banana":"yellow"}
+fruit = {"apple":"red", "lime":"green", "banana":"yellow"}  #what is more colorful than fruit?
 print fruit ["apple"]
-'''
-weight = response = raw_input(name+", How much do you weigh? ")
 
-stone_weight = 0.0714285714
-def calcStone(weight, stone_weight):
-	calcStone(weight * stone_weight)
-	return calcStone
+weight = response = raw_input(name+", How much do you weigh? ")  #we need a weight to use in our stone conversion
 
-	print calcStone
+weight = int(weight)		#turn our given weight back into an integer as the input made it a string
+
+stone_weight = 0.0714285714 #stone weight to 1 pound
+
+def calcStone(stone_weight,weight): #calculate pound to stone
+   x = stone_weight*weight
+   return x							#return stone
+
+print calcStone(stone_weight,weight)  
+
+#print(ran_num)   #checking to make sure I can call ran_num
+
+if ran_num < 50:  #let's use the random generated number to decide
+	print "some statement here of the story" #the fate of the story
+else:
+	if ran_num > 50:
+		print ran_num + " then this is going to happen instead"
+
+if cookies < 5:
+	print "Then you can pass over the bridge"
+else:
+	if cookies > 4:
+		print "Then you must go down the river to the ferry"
+
+#two sequence looping with zip function, questions and answers for dialog
+questions = ['decision', 'answer', 'favorite food'] #question nouns
+answers = ['yes', 'I think I shall swim', 'macaroni and cheese'] #answers
+for q, a in zip(questions, answers): #for statement zip function
+	print "What is your {0}? It is {1}. ".format(q, a) #formating printing q a
