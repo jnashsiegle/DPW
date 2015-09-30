@@ -22,7 +22,7 @@ print(randint(0,int(ran_num))) #generate a random number
 friend = response = raw_input("What is your favorite name, " +name +"? ") #lets add a name for another character
 
 vehicle = response = raw_input(name+", name any type of vehicle, land, air, or water please? ")
-print vehicle
+print vehicle   #what vehicle will the verb utilize in the story?
 
 players = ["Mike", "John", "Chris", "Larry", "Moe"]  #and some friends or students
 players.append(friend)
@@ -32,9 +32,10 @@ cookies = response = raw_input(name+", How many cookies in a baker's dozen? ") #
 
 even = response = raw_input("Quick!  What is the first even number you can think of? ") #I just need an even number
 
+u_fruit = response = raw_input(name+", Choose one fruit, apple, lime or banana.  Please use all lowercase in your answer ") #let's use UI in order to pick the fruit for the color that will be used in the story!!
 fruit = dict()
 fruit = {"apple":"red", "lime":"green", "banana":"yellow"}  #what is more colorful than fruit?
-print fruit ["apple"]
+print fruit[u_fruit]
 
 weight = response = raw_input(name+", How much do you weigh? ")  #we need a weight to use in our stone conversion
 
@@ -69,7 +70,7 @@ else:
 
 #two sequence looping with zip function, questions and answers for dialog
 questions = ['decision', 'answer', 'favorite food'] #question nouns
-answers = ['yes', 'I think I shall swim', 'macaroni and cheese'] #answers
+answers = ['yes', 'I think I shall', 'macaroni and cheese'] #answers REMEMBER TO ADD VERB IN STORY FOLLOWING I THINK I SHALL
 for q, a in zip(questions, answers): #for statement zip function
 	pass
 	pass
@@ -77,6 +78,7 @@ for q, a in zip(questions, answers): #for statement zip function
 	#print "What is your {0}? It is {1}. ".format(q, a) #formatting printing q a
 
 
-print name+", would you " + verb + " to the store and pick up " + str(calcStone(stone_weight,weight)) + " pounds of flour so I can make " + dessert + " for " + meal + "?" + '\n'
-print name + " grabbed a " + color + "" + clothing + " to slip on while picking up the leash so the family " + animal + " named " + friend + " could go along for the journey."
+print name+", would you " + verb + " to the store and pick up " + str(calcStone(stone_weight,weight)) + " pounds of flour so I can make " + dessert + " for " + meal + "?"
+print name + " grabbed a " + color + " " + clothing + " to slip on while picking up the leash so the family " + animal + " named " + " " + friend + " could go along for the journey."
+print "Hopping into the " + vehicle + " " + name + " calls " + players[2] + '"Meet me at the bridge" as the '  + str(fruit[u_fruit]) + " " + vehicle + " speeds off in that direction." 
 
