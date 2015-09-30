@@ -18,6 +18,9 @@ ran_num = response = raw_input("Choose a number between 1 and 100: ")#this numbe
 
 friend = response = raw_input("What is your favorite name, " +name +"? ") #lets add a name for another character
 
+vehicle = response = raw_input(name+", name any type of vehicle, land, air, or water please?")
+print vehicle
+
 from random import randint
 print(randint(0,int(ran_num))) #generate a random number
 
@@ -42,7 +45,7 @@ stone_weight = 0.0714285714 #stone weight to 1 pound
 
 def calcStone(stone_weight,weight): #calculate pound to stone
    x = stone_weight*weight
-   floatx = int(x)
+   floatx = int(x)		#let's remove the decimals later in the story
    return floatx						#return stone
 
 print calcStone(stone_weight,weight) 
