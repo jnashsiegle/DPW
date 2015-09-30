@@ -4,9 +4,9 @@ name = response = raw_input ("What is your name?  ")  #get player name for use w
 
 verb = response = raw_input(name+", please pick a verb: ") #grab a verb to use in story
 
-noun = response = raw_input("Please pick a noun: ")  #grab a noun
+meal = response = raw_input("What is your favorite meal? ")  #choose a meal
 
-adj = response = raw_input("Thank you " + name+", now would you please pick an adjective: ") #and an adjective
+dessert = response = raw_input("Thank you " + name+", now what is your favorite dessert? ") #and an dessert
 
 color = response = raw_input(name+", what is your favorite color: ") #what's a story without a color
 
@@ -42,9 +42,11 @@ stone_weight = 0.0714285714 #stone weight to 1 pound
 
 def calcStone(stone_weight,weight): #calculate pound to stone
    x = stone_weight*weight
-   return x							#return stone
+   floatx = int(x)
+   return floatx						#return stone
 
-print calcStone(stone_weight,weight)  
+print calcStone(stone_weight,weight) 
+
 
 #print(ran_num)   #checking to make sure I can call ran_num
 
@@ -65,3 +67,6 @@ questions = ['decision', 'answer', 'favorite food'] #question nouns
 answers = ['yes', 'I think I shall swim', 'macaroni and cheese'] #answers
 for q, a in zip(questions, answers): #for statement zip function
 	print "What is your {0}? It is {1}. ".format(q, a) #formating printing q a
+
+
+	print name+", would you " + verb + " to the store and pick up " + str(calcStone(stone_weight,weight)) + " pounds of flour so I can make " + dessert + " for dinner tonight?"
