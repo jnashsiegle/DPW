@@ -16,18 +16,17 @@ clothing = response = raw_input(name+", What article of clothing are you wearing
 
 ran_num = response = raw_input("Choose a number between 1 and 100: ")#this number will be used to determine the end of the range a random number is generated from
 
-friend = response = raw_input("What is your favorite name, " +name +"? ") #lets add a name for another character
-
-vehicle = response = raw_input(name+", name any type of vehicle, land, air, or water please?")
-print vehicle
-
 from random import randint
 print(randint(0,int(ran_num))) #generate a random number
+
+friend = response = raw_input("What is your favorite name, " +name +"? ") #lets add a name for another character
+
+vehicle = response = raw_input(name+", name any type of vehicle, land, air, or water please? ")
+print vehicle
 
 players = ["Mike", "John", "Chris", "Larry", "Moe"]  #and some friends or students
 players.append(friend)
 print players
-
 
 cookies = response = raw_input(name+", How many cookies in a baker's dozen? ") #how many know a baker's dozen
 
@@ -54,22 +53,30 @@ print calcStone(stone_weight,weight)
 #print(ran_num)   #checking to make sure I can call ran_num
 
 if ran_num < 50:  #let's use the random generated number to decide
-	print "some statement here of the story" #the fate of the story
+	#print "some statement here of the story" #the fate of the story
+		pass
 else:
 	if ran_num > 50:
-		print ran_num + " then this is going to happen instead"
-
+		#print ran_num + " then this is going to happen instead"
+		pass
 if cookies < 5:					#using if / else to determine if story uses bridge or ferry to get home
-	print "Then you can pass over the bridge"
+	#print "Then you can pass over the bridge"
+		pass
 else:
 	if cookies > 4:
-		print "Then you must go down the river to the ferry"
+		#print "Then you must go down the river to the ferry"
+		pass
 
 #two sequence looping with zip function, questions and answers for dialog
 questions = ['decision', 'answer', 'favorite food'] #question nouns
 answers = ['yes', 'I think I shall swim', 'macaroni and cheese'] #answers
 for q, a in zip(questions, answers): #for statement zip function
-	print "What is your {0}? It is {1}. ".format(q, a) #formating printing q a
+	pass
+	pass
+	pass
+	#print "What is your {0}? It is {1}. ".format(q, a) #formatting printing q a
 
 
-	print name+", would you " + verb + " to the store and pick up " + str(calcStone(stone_weight,weight)) + " pounds of flour so I can make " + dessert + " for dinner tonight?"
+print name+", would you " + verb + " to the store and pick up " + str(calcStone(stone_weight,weight)) + " pounds of flour so I can make " + dessert + " for " + meal + "?" + '\n'
+print name + " grabbed a " + color + "" + clothing + " to slip on while picking up the leash so the family " + animal + " named " + friend + " could go along for the journey."
+
