@@ -2,17 +2,17 @@ print "Welcome to Madlibs!  A fantasy world created by your words and imaginatio
 
 name = response = raw_input ("What is your name?  ")  #get player name for use within game
 
-response = raw_input(name+", please pick a verb: ") #grab a verb to use in story
+verb = response = raw_input(name+", please pick a verb: ") #grab a verb to use in story
 
-response = raw_input("Please pick a noun: ")  #grab a noun
+noun = response = raw_input("Please pick a noun: ")  #grab a noun
 
-response = raw_input("Thank you " + name+", now would you please pick an adjective: ") #and an adjective
+adj = response = raw_input("Thank you " + name+", now would you please pick an adjective: ") #and an adjective
 
-response = raw_input(name+", what is your favorite color: ") #what's a story without a color
+color = response = raw_input(name+", what is your favorite color: ") #what's a story without a color
 
-response = raw_input("Name an animal that lives on a farm. ") #and the animal
+animal = response = raw_input("Name an animal that lives on a farm. ") #and the animal
 
-response = raw_input(name+", What article of clothing are you wearing right now: ") #not getting too personal are we?  nawwww
+clothing = response = raw_input(name+", What article of clothing are you wearing right now: ") #not getting too personal are we?  nawwww
 
 ran_num = response = raw_input("Choose a number between 1 and 100: ")#this number will be used to determine the end of the range a random number is generated from
 
@@ -54,7 +54,7 @@ else:
 	if ran_num > 50:
 		print ran_num + " then this is going to happen instead"
 
-if cookies < 5:
+if cookies < 5:					#using if / else to determine if story uses bridge or ferry to get home
 	print "Then you can pass over the bridge"
 else:
 	if cookies > 4:
