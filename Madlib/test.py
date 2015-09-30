@@ -1,3 +1,5 @@
+#used as a playground to test/debug bits of the program at a time
+
 name = raw_input ("What is your name?  ")  #get player name for use within game
 ran_num = raw_input("Choose a number between 1 and 100: ")#this number will be used to determine the end of the range a random number is generated from
 
@@ -8,3 +10,12 @@ if int(ran_num) < 50:  #let's use the random generated number to decide
 else:
 	if int(ran_num) >= 50:
 		print " With a huff, " + name + " replies, 'Fine then, we need to get going anyway!'"
+
+
+
+
+
+'''
+Jana Nash-Siegle
+Testing and debugging file
+'''

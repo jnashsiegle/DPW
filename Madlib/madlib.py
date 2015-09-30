@@ -1,3 +1,9 @@
+'''
+created by Jana Nash-Siegle
+DPW 101501
+Wainman
+'''
+
 print "Welcome to Madlibs!  A fantasy world created by your words and imagination" #Welcome message
 
 name = raw_input ("What is your name?  ")  #get player name for use within game
