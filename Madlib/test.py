@@ -1,11 +1,10 @@
 name = raw_input ("What is your name?  ")  #get player name for use within game
-#two sequence looping with zip function, questions and answers for dialog
-questions = ['decision', 'answer', 'favorite food'] #question nouns
-answers = ['yes', 'I think I shall', 'macaroni and cheese'] #answers REMEMBER TO ADD VERB IN STORY FOLLOWING I THINK I SHALL
-for q, a in zip(questions, answers): #for statement zip function
-	
-	print "What is your {0}? It is {1}. ".format(q, a) #formatting printing q a
+ran_num = raw_input("Choose a number between 1 and 100: ")#this number will be used to determine the end of the range a random number is generated from
 
-print " With a huff, " + name + " replies, 'Fine then, we need to get going anyway!'"
-print "After a period of time, they arrive at the store and pick out the flour that was needed.  Larry inundates " + name + " with questions, non-stop."
-print "What is your {0}? It is {1}. ".format(q, a)
+from random import randint
+print(randint(0,int(ran_num))) #generate a random number
+if int(ran_num) < 50:  #let's use the random generated number to decide
+	print "With slumped shoulders and a sly grin, Chris holds out the small bauble for all to see." #the fate of the story
+else:
+	if int(ran_num) >= 50:
+		print " With a huff, " + name + " replies, 'Fine then, we need to get going anyway!'"
