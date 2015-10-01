@@ -1,8 +1,9 @@
-'''
-created by Jana Nash-Siegle
+"""created by Jana Nash-Siegle
 DPW 101501
 Wainman
-'''
+
+This file shall generate a madlibs-type program where it will ask for user input on a varietyof questions and then based on the input provided will inject these answers into a pre-written storyline that can have different outcomes, again based upon user input.
+"""
 
 print "Welcome to Madlibs!  A fantasy world created by your words and imagination" #Welcome message
 
@@ -45,10 +46,16 @@ fruit = {"apple":"red", "lime":"green", "banana":"yellow"}  #what is more colorf
 weight = raw_input(name+", How much do you weigh? ")  #we need a weight to use in our stone conversion
 weight = int(weight)		#turn our user given weight back into an integer as the input made it a string
 stone_weight = 0.0714285714 #stone weight to 1 pound
-def calcStone(stone_weight,weight): #calculate pound to stone
-   x = stone_weight*weight
-   floatx = int(x)		#let's remove the decimals later in the story
-   return floatx						#return stone
+def calcStone(stone_weight,weight): 
+	"""Converts pounds to stones. 
+	calculates pound to stone weight
+	turns x back into an integer and float it to remove decimals
+	return floatx
+	commented out the print function which we shall use as a test
+	"""
+	x = stone_weight*weight
+	floatx = int(x)		
+	return floatx						
 
 #print calcStone(stone_weight,weight) 
 print "++++++++++++===================================++++++++++++++++++"
