@@ -1,13 +1,19 @@
 #used as a playground to test/debug bits of the program at a time
-name = raw_input ("What is your name?  ")  #get player name for use within game
-friend = raw_input("What is your favorite name, " +name +"? ") #lets add a name for the family pet
-best_friend = raw_input ("Please choose a number between 1-5, thank you " + name + ".  ")
+weight = raw_input(name+", How much do you weigh? ")  #we need a weight to use in our stone conversion
+weight = int(weight)		#turn our user given weight back into an integer as the input made it a string
+stone_weight = 0.0714285714 #stone weight to 1 pound
+def calcStone(stone_weight,weight): #calculate pound to stone
+"""Converts pounds to stones. 
+	calculates pound to stone weight
+	turns x back into an integer and float it to remove decimals
+	return floatx
+	commented out the print function which we shall use as a test
+	"""
+   x = stone_weight*weight
+   floatx = int(x)		#let's remove the decimals later in the story
+   return floatx						#return stone
 
-players = ["Mike", "John", "Chris", "Larry", "Moe"]  #and some friends or students or pets, it's a name pool
-
-z = int(best_friend)
-print players[z]
-
+#print calcStone(stone_weight,weight) 
 
 
 
