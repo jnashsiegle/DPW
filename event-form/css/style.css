@@ -143,6 +143,16 @@ header p a {
   color: rgba(255, 255, 255, 0.85);
   text-decoration: none;
 }
+#wrapper {
+  width: 85%;
+  margin: 0 auto;
+  color: white;
+  background-color: #5B866B;
+  -moz-border-radius: 10px / 10px;
+  -webkit-border-radius: 10px 10px;
+  border-radius: 10px / 10px;
+  padding: 30px;
+}
 
 
 
