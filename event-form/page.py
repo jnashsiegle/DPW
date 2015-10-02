@@ -12,7 +12,18 @@ class Page(object):
 	</head>
 	<body>"""
 
-		self.page_body = '''"Acme Web Workshop Event Planning Survey"
+		self.page_body = '''
+		<header><h1>Acme Web Workshop Event Planning Survey</h1>
+		<p><a href = "bing.com">Exit Survey</a></p>
+		</header>
+
+
+
+
+
+
+
+
 		'''
 		self.page_close = '''
 	</body>
