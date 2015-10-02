@@ -2,8 +2,7 @@
 Jana Nash-Siegle
 9/28/2015
 DPW - 01
-Simple Log-In Form B
-So, in essence this page is using links rather than a form.  IOW if you know the information you can use the information this way rather than requesting the information from the user via a form.
+Setting Up the Launcher
 '''
 import webapp2 #use the webapp2 library - needed for basic functionality
 
@@ -17,15 +16,10 @@ class MainHandler(webapp2.RequestHandler): #Declares a class
     	</head>
     		<body>'''
 
-		page_body = '''
-		<a href = "?email=mickey@disney.com&user=Mickey">Mickey</a><br />
-		<a href = "?email=donald@disney.com&user=Donald">Donald</a><br />
-		<a href = "?email=minnie@disney.com&user=Minnie">Minnie</a><br />
-		<a href = "?email=daisy@disney.com&user=Daisy">Daisy</a>
-
-
-
-		'''
+		page_body = '''<form method = "GET">
+		    			<label>Name: </label><input type = "text" name = "user" />
+		    			<label>Email: </label><input type = "text" name = "email" />
+		    			<input type = "submit" value = "Submit" />'''
 		page_close = '''
     		</form>
     	</body>
@@ -38,7 +32,7 @@ class MainHandler(webapp2.RequestHandler): #Declares a class
    		#the two lines below store the information into variables
 	    		user = self.request.GET['user'] #if we want more than the above console printing let's store it in a variable called user
 	    		email = self.request.GET['email']
-	    		self.response.write(page_head + user + ' ' + email + page_close)#print  if you don't want to print form again just results, take out the page_body and it will print only the user inputs
+	    		self.response.write(page_head + user + ' ' + email + page_body + page_close)#print  if you don't want to print form again just results, take out the page_body and it will print only the user inputs
 	    	else:
 	    		self.response.write(page_head + page_body + page_close)#print
 
