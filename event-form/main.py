@@ -2,11 +2,10 @@
 Jana Nash-Siegle
 10/2/2015
 DPW - 01
-Simple Event Planning Form
-
+Event Survey Form - Project 2
 '''
 import webapp2
-from page import Page #from pages.py import the page class
+from pages import Page #from pages.py import the page class
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
