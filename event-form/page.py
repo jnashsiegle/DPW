@@ -1,9 +1,8 @@
 class Page(object):
 	def __init__(self):
-		self.title = "Event Planning Survey!"
+		self.title = "Welcome!"
 		self.css = "css/style.css"
-
-		self.page_head = """
+		self.head = """
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -55,31 +54,38 @@ class Page(object):
 						<label>Other: (Please Specify)</label>
 						<input type = "text" name = "comm-other" />
 
-						<input type = "submit" value = "Submit" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		'''
+						<input type = "submit" value = "Submit" />'''
 		self.page_close = '''
 	</body>
 </html>'''
 		
 
-	def print_out(self):
-		all =  self.page_head + self.page_body + self.page_close
-		all = all.format(**locals())
-		return all
+	 	if self.request.GET: #same as adding == True: to the end of it.  We are giving it a condition of if the variable exists then print out the following information
+   		#print self.request.GET['user'] #gets the information that will be entered into the page, has to match the name of the element
+   		#print "hello there" testing of print
+   		#the two lines below store the information into variables
+	    		#attendee = self.request.GET['attendee'] #if we want more than the above console printing let's store it in a variable called user
+	    		email = self.request.GET['email']
+	    		'''html = self.request.GET['HTML']
+	    		javascrfipt = self.request.GET['JavaScript']
+	    		ssp = self.request.GET['ssp']
+	    		csp = self.request.GET['csp']
+	    		hear = self.request.GET['hear']
+	    		ve = self.request.GET['ve']
+	    		easy = self.request.GET['easy']
+	    		sc = self.request.GET['sc']
+	    		hard = self.request.GET['hard']
+	    		vh = self.request.GET['vh']
+	    		rpComments = self.request.GET['rpComments']
+	    		dietYes = self.request.GET['dietYes']
+	    		dietNo = self.request.GET['dietNo']
+	    		dietDetails = self.request.GET['dietDetails']
+	    		payment = self.request.GET['payment']
+	    		commEmail = self.request.GET['commEmail']
+	    		commPhone = self.request.GET['commPhone']
+	    		commMail = self.request.GET['commMail']
+	    		commOther = self.request.GET['commOther']'''
+	    		
+	    		self.response.write(page_head + user + ' ' + email + page_body + page_close)#print  if you don't want to print form again just results, take out the page_body and it will print only the user inputs
+	    	else:
+	    		self.response.write(page_head + page_body + page_close)#print
