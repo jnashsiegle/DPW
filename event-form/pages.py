@@ -1,9 +1,9 @@
-class Page(object):
+class Form(object):
 	def __init__(self):
 		self.title = "Event Planning Survey!"
 		self.css = "css/style.css"
 
-		self.page_head = """
+		self.head = """
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -12,7 +12,7 @@ class Page(object):
 	</head>
 	<body>"""
 
-		self.page_body = '''
+		self.body = '''
 		<header><h1>Acme Web Workshop Event Planning Survey</h1>
 		<p><a href = "bing.com">Exit Survey</a></p>
 		</header>
@@ -25,7 +25,7 @@ class Page(object):
 						<label>Name: </label><input type = "text" name = "attendee" />
 						<label>Email: </label><input type = "text" name = "email" />
 						<p>Which workshops will you be attending?</p>
-						<label>HTML</label><input type = "checkbox" name = "HTML" />
+						<label>html</label><input type = "checkbox" name = "html" />
 						<label>JavaScript</label><input type = "checkbox" name = "JavaScript" />
 						<label>Server-Side Programming</label><input type = "checkbox" name = "ssp" />
 						<label>Client-Side Programming</label><input type = "checkbox" name = "csp" />
@@ -51,12 +51,13 @@ class Page(object):
 						<input type = "text" name = "comm-other" />
 						<input type = "submit" value = "Submit" />
 		'''
-		self.page_close = '''
+		self.close = '''
 	</body>
 </html>'''
 		
-
+	    
+	
 	def print_out(self):
-		all =  self.page_head + self.page_body + self.page_close
+		all =  self.head +  self.body + self.close
 		all = all.format(**locals())
 		return all
