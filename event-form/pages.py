@@ -11,7 +11,7 @@ class Form(object):
 
 		self.header = '''
 		<header><h1>Acme Web Workshop Event Planning Survey</h1>
-		<p><a href = "bing.com">Exit Survey</a></p>
+		<p><a href = "http://www.bing.com">Exit Survey</a></p>
 		</header>'''
 		self.body = '''<article id = "wrapper">
 									
@@ -21,7 +21,7 @@ class Form(object):
 					<form method = "GET">
 						<div id = "personalInfo">
 							<label>Name: </label><input type = "text" placeholder = "Enter Your Name" name = "attendee" />
-							<label>Email: </label><input type = "text" placeholder = "yourname@domain.com" name = "email" />
+							<label>Email: </label><input type = "email" placeholder = "yourname@domain.com" name = "email" />
 						</div>
 						<div id = "workshops">
 							<label>Which workshop will you be attending?</label>
@@ -36,32 +36,37 @@ class Form(object):
 						</div>
 
 						<div id = "registration">
-						<label>How did you hear about this event?</label><input type = "text" placeholder = "I heard about this..." name = "hear" />
-						<p>How easy was the registration process for this event?></p>
-						<label>Very Easy</label><input type = "radio" name = "rp" value = "very easy" checked/>
-						<label>Easy</label><input type = "radio" name = "rp" value = "easy"/>
-						<label>Slightly Confusing</label><input type = "radio" name = "rp" value = "slightly confusing"/>
-						<label>Hard</label><input type = "radio" name = "rp" value = "hard"/>
-						<label>Very Hard</label><input type = "radio" name = "rp" value = "very hard" />
-						<label>Comments about the registration process: </label><input type = "text" placeholder = "Make comments here" name = "rpComments" />
+							<label>How did you hear about this event?</label><input type = "textarea" placeholder = "I heard about this..." cols="30" rows="15" name = "hear" />
+							<p>How easy was the registration process for this event?</p>
+							<label>Very Easy</label><input type = "radio" name = "rp" value = "very easy" checked/>
+							<label>Easy</label><input type = "radio" name = "rp" value = "easy"/>
+							<label>Slightly Confusing</label><input type = "radio" name = "rp" value = "slightly confusing"/>
+							<label>Hard</label><input type = "radio" name = "rp" value = "hard"/>
+							<label>Very Hard</label><input type = "radio" name = "rp" value = "very hard" />
+							<p></p>
+							<label>Comments about the registration process: </label><input type = "text" placeholder = "Make comments here" name = "rpComments" />
 						</div>
-						<p>Do you have any dietary restrictions?</p>
-						<label>Yes</label><input type = "radio" name = "diet" value = "Yes I have diet restrictions"/>
-						<label>No</label><input type = "radio" name = "diet" value = "No, I have no diet restrictions" checked/>
-						<p>if yes, please enter details: </p>
-						<label>Details: </label><input type = "text" placeholder = "I have the following restrictions..." name = "dietDetails" />
-						<label>Who will be paying for you to attend this event?</label><input type = "text" placeholder = "...will be paying for this event" name = "payment">
-						<p>What is the preferred method of contacting you in regards to this event?</p>
-						<label>E-Mail</label><input type = "radio" name = "communication" value = "email" checked/>
-						<label>Phone</label><input type = "radio" name = "communication"  value = "phone"/>
-						<label>Snail Mail</label><input type = "radio" name = "communication" value = "snail mail" />
-						<p>What is your interest in these workshops?</p>
-						<label>Career</label><input type = "checkbox" name = "purpose" value = "career" checked />
-						<label>Passion</label><input type = "checkbox" name = "purpose" value = "passion" />
-						<label>Hobby</label><input type = "checkbox" name = "purpose" value = "hobby" />
+						<div id = "diet">
+							<p>Do you have any dietary restrictions?
+							<label>Yes</label><input type = "radio" name = "diet" value = "Yes I have diet restrictions"/>
+							<label>No</label><input type = "radio" name = "diet" value = "No, I have no diet restrictions" checked/>
+							<p>if yes, please enter details: </p>
+							<label>Details: </label><input type = "text" placeholder = "I have the following restrictions..." name = "dietDetails" /></p>
+						</div>
+						<div id = "misc">
+							<label>Who will be paying for you to attend this event?</label><input type = "text" placeholder = "...will be paying for this event" name = "payment">
+							<p>What is the preferred method of contacting you in regards to this event?</p>
+							<label>E-Mail</label><input type = "radio" name = "communication" value = "email" checked/>
+							<label>Phone</label><input type = "radio" name = "communication"  value = "phone"/>
+							<label>Snail Mail</label><input type = "radio" name = "communication" value = "snail mail" />
+							<p>What is your interest in these workshops?</p>
+							<label>Career</label><input type = "checkbox" name = "purpose" value = "career" checked />
+							<label>Passion</label><input type = "checkbox" name = "purpose" value = "passion" />
+							<label>Hobby</label><input type = "checkbox" name = "purpose" value = "hobby" />
+						</div>
 
 						
-						<input type = "submit" value = "Submit" />
+						<p><input type = "submit" value = "Submit" /></p>
 		'''
 		self.close = '''
 					</form>
