@@ -1,22 +1,19 @@
 class Form(object):
 	def __init__(self):
-		self.title = "Event Planning Survey!"
-		self.css = "css/style.css"
-
 		self.head = """
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>{self.title}</title>
-		<link href = "{self.css}" rel = "Stylesheet" type = text/css" />
+		<title>Event Planning Survey</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
 	<body>"""
 
-		self.body = '''
+		self.header = '''
 		<header><h1>Acme Web Workshop Event Planning Survey</h1>
 		<p><a href = "bing.com">Exit Survey</a></p>
-		</header>
-			<article id = "wrapper">
+		</header>'''
+		self.body = '''<article id = "wrapper">
 				<section>
 					<p>Thank you for signing up for our next workshop.  Would you take a moment to fill out this survey so we may learn how to better serve you?</p>
 				</section>
@@ -58,6 +55,6 @@ class Form(object):
 	    
 	
 	def print_out(self):
-		all =  self.head +  self.body + self.close
+		all =  self.head + self.header +  self.body + self.close
 		all = all.format(**locals())
 		return all

@@ -15,7 +15,7 @@ class MainHandler(webapp2.RequestHandler):
         	#storing our info from the user inputs
         	attendee = self.request.GET['attendee']
         	email = self.request.GET['email']
-        	self.response.write(event_form.head + attendee + ' ' + email + event_form.close)
+        	self.response.write(event_form.head +event_form.header +  attendee + ' ' + email + event_form.close)
         else:	    	
         	self.response.write(event_form.print_out())# this will print out in browser
         #DO NOT DELETE ABOVE LINE
