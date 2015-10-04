@@ -1,7 +1,15 @@
+'''
+Jana Nash-Siegle
+DPW
+Event-Form
+
+This page will provide the structure for the form.  It contains the html and is divided up into 4 sections, self.head, self. header
+self.body, self.close to make it easier to string together later over in main.py.
+'''
 class Form(object):
 	def __init__(self):
-		self.head = """
-<!DOCTYPE HTML>
+		self.head = """   				
+<!DOCTYPE HTML>							
 <html>
 	<head>
 		<title>Event Planning Survey</title>
@@ -74,7 +82,7 @@ class Form(object):
 		
 	    
 	
-	def print_out(self):
-		all =  self.head + self.header +  self.body + self.close
-		all = all.format(**locals())
+	def print_out(self):			#defines a method to print out the form that we will call over in main.py
+		all =  self.head + self.header +  self.body + self.close  #sets the variable all to be all the sections.
+		all = all.format(**locals())   #uses a dictionary-based string formatting
 		return all
