@@ -24,7 +24,7 @@ class MainHandler(webapp2.RequestHandler):
         	payment = self.request.GET['payment']
         	communication = self.request.GET['communication']
 
-        	self.response.write(event_form.head + event_form.header +  attendee + ' ' + email + ' ' + str(workshops) + ' ' + hear + ' ' + rp + ' ' + rpComments + ' ' + diet + ' ' + dietDetails + ' ' + payment + ' ' + communication + ' ' +event_form.close)
+        	self.response.write(event_form.head + event_form.header +  attendee + ' ' + email + ' ' + str(workshops) + ' ' + hear + ' ' + rp + ' ' + rpComments + ' ' + diet + ' ' + dietDetails + ' ' + payment + ' ' + communication + ' ' + event_form.close)
         else:	    	
         	self.response.write(event_form.print_out())# this will print out in browser
         #DO NOT DELETE ABOVE LINE

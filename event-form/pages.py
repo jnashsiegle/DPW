@@ -14,21 +14,28 @@ class Form(object):
 		<p><a href = "bing.com">Exit Survey</a></p>
 		</header>'''
 		self.body = '''<article id = "wrapper">
-				<section>
-					<p>Thank you for signing up for our next workshop.  Would you take a moment to fill out this survey so we may learn how to better serve you?</p>
-				</section>
-				<section>
+									
+						<h3>Thank you for signing up for our next workshop.</h3> <p> Would you take a moment to fill out this survey so we may learn how to better serve you?</p>
+					
+					
 					<form method = "GET">
-						<label>Name: </label><input type = "text" placeholder = "Enter Your Name" name = "attendee" />
-						<label>Email: </label><input type = "text" placeholder = "yourname@domain.com" name = "email" />
-						<p>Which workshop will you be attending? </p>
-						<select name = "workshops">
-						<option value = "">Click here to see options</option>
-						<option value = "css">CSS</option>
-						<option value = "html">HTML</option>
-						<option value = "js">JavaScript</option>
-						<option value = "python">Python</option>
-						</select>
+						<div id = "personalInfo">
+							<label>Name: </label><input type = "text" placeholder = "Enter Your Name" name = "attendee" />
+							<label>Email: </label><input type = "text" placeholder = "yourname@domain.com" name = "email" />
+						</div>
+						<div id = "workshops">
+							<label>Which workshop will you be attending?</label>
+								<select name = "workshops">
+									<option value = "">Click here to see options</option>
+									<option value = "css">CSS</option>
+									<option value = "html">HTML</option>
+									<option value = "js">JavaScript</option>
+									<option value = "python">Python</option>
+								</select>
+							
+						</div>
+
+						<div id = "registration">
 						<label>How did you hear about this event?</label><input type = "text" placeholder = "I heard about this..." name = "hear" />
 						<p>How easy was the registration process for this event?></p>
 						<label>Very Easy</label><input type = "radio" name = "rp" value = "very easy" checked/>
@@ -36,7 +43,8 @@ class Form(object):
 						<label>Slightly Confusing</label><input type = "radio" name = "rp" value = "slightly confusing"/>
 						<label>Hard</label><input type = "radio" name = "rp" value = "hard"/>
 						<label>Very Hard</label><input type = "radio" name = "rp" value = "very hard" />
-						<label>Comments about the registration process: </label><input type = "text" placeholder = "Make comments here"name = "rpComments" />
+						<label>Comments about the registration process: </label><input type = "text" placeholder = "Make comments here" name = "rpComments" />
+						</div>
 						<p>Do you have any dietary restrictions?</p>
 						<label>Yes</label><input type = "radio" name = "diet" value = "Yes I have diet restrictions"/>
 						<label>No</label><input type = "radio" name = "diet" value = "No, I have no diet restrictions" checked/>
@@ -56,6 +64,8 @@ class Form(object):
 						<input type = "submit" value = "Submit" />
 		'''
 		self.close = '''
+					</form>
+				</article>
 	</body>
 </html>'''
 		
