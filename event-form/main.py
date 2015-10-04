@@ -15,7 +15,16 @@ class MainHandler(webapp2.RequestHandler):
         	#storing our info from the user inputs
         	attendee = self.request.GET['attendee']
         	email = self.request.GET['email']
-        	self.response.write(event_form.head +event_form.header +  attendee + ' ' + email + event_form.close)
+        	workshops = self.request.get_all('workshops')
+        	hear = self.request.GET['hear']
+        	rp = self.request.GET['rp']
+        	rpComments = self.request.GET['rpComments']
+        	diet = self.request.GET['diet']
+        	dietDetails = self.request.GET['dietDetails']
+        	payment = self.request.GET['payment']
+        	communication = self.request.GET['communication']
+
+        	self.response.write(event_form.head + event_form.header +  attendee + ' ' + email + ' ' + str(workshops) + ' ' + hear + ' ' + rp + ' ' + rpComments + ' ' + diet + ' ' + dietDetails + ' ' + payment + ' ' + communication + ' ' +event_form.close)
         else:	    	
         	self.response.write(event_form.print_out())# this will print out in browser
         #DO NOT DELETE ABOVE LINE
