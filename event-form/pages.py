@@ -36,7 +36,7 @@ class Form(object):
 						</div>
 
 						<div id = "registration">
-							<label>How did you hear about this event?</label><input type = "textarea" placeholder = "I heard about this..." cols="30" rows="15" name = "hear" />
+							<label>How did you hear about this event?</label><input type = "text" placeholder = "online/word of mouth" name = "hear" required />
 							<p>How easy was the registration process for this event?</p>
 							<label>Very Easy</label><input type = "radio" name = "rp" value = "very easy" checked/>
 							<label>Easy</label><input type = "radio" name = "rp" value = "easy"/>
@@ -44,17 +44,17 @@ class Form(object):
 							<label>Hard</label><input type = "radio" name = "rp" value = "hard"/>
 							<label>Very Hard</label><input type = "radio" name = "rp" value = "very hard" />
 							<p></p>
-							<label>Comments about the registration process: </label><input type = "text" placeholder = "Make comments here" name = "rpComments" />
+							<label>Comments about the registration process: </label><input type = "text" placeholder = "Make comments here" name = "rpComments" value = "none"/>
 						</div>
 						<div id = "diet">
 							<p>Do you have any dietary restrictions?
-							<label>Yes</label><input type = "radio" name = "diet" value = "Yes I have diet restrictions"/>
-							<label>No</label><input type = "radio" name = "diet" value = "No, I have no diet restrictions" checked/>
+							<label>Yes</label><input type = "radio" name = "diet" value = "do"/>
+							<label>No</label><input type = "radio" name = "diet" value = "don't" checked/>
 							<p>if yes, please enter details: </p>
-							<label>Details: </label><input type = "text" placeholder = "I have the following restrictions..." name = "dietDetails" /></p>
+							<label>Details: </label><input type = "text" placeholder = "Restrictions" name = "dietDetails" value = "none"/></p>
 						</div>
 						<div id = "misc">
-							<label>Who will be paying for you to attend this event?</label><input type = "text" placeholder = "...will be paying for this event" name = "payment">
+							<label>Who will be paying for you to attend this event?</label><input type = "text" placeholder = "company" name = "payment" value = "none">
 							<p>What is the preferred method of contacting you in regards to this event?</p>
 							<label>E-Mail</label><input type = "radio" name = "communication" value = "email" checked/>
 							<label>Phone</label><input type = "radio" name = "communication"  value = "phone"/>
@@ -63,9 +63,7 @@ class Form(object):
 							<label>Career</label><input type = "checkbox" name = "purpose" value = "career" checked />
 							<label>Passion</label><input type = "checkbox" name = "purpose" value = "passion" />
 							<label>Hobby</label><input type = "checkbox" name = "purpose" value = "hobby" />
-						</div>
-
-						
+						</div>						
 						<p><input type = "submit" value = "Submit" /></p>
 		'''
 		self.close = '''
