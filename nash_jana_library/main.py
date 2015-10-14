@@ -20,7 +20,7 @@ class MainHandler(webapp2.RequestHandler):
         lib.calc_time_span()    #adds this to run but we need to add it to the printing out list below
         p.body = lib.compile_list() + lib.calc_time_span() #adds the compile list to the body tag of the html in the page.py
         '''
-        self.response.write(rp.print_out()) #sends the info out to browser as a big string
+        self.response.write(f.print_out()) #sends the info out to browser as a big string
         
 
 

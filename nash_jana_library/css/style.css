@@ -54,8 +54,8 @@ select {
     -webkit-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
     -moz-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
     box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
-    background: #f8f8f8;
-    color:#888;
+    background: #ffd20f;
+    color:#014a06;
     border:none;
     outline:none;
     display: inline-block;
@@ -69,11 +69,11 @@ select {
 TYPOGRAPHY
 ====================================================================== */
 /*
-#346051 = dark green
-#5B866B = light green
-#B98C48 - orange/brown (font)
-#867653 - brown
-#524741 - dark brown */
+#014a06 = dark green (font)
+#ede8d9 = cream (background)
+#ffd20f - yellow (highlighting)
+#ff372d - red (error)
+#89d4f5 - powder blue */
 header::after {
   content: "";
   display: table;
@@ -85,19 +85,19 @@ html, body {
 }
 body {
   font-family: Helvetica, sans-serif;
-  color: white;   
+  color: #014a06;   
   line-height: 2;
-  background-color: #867653;
+  background-color: #89d4f5;
 }
 header {  
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
   width: 100%;
-  background-color: #524741;
+  background-color: #ede8d9;
 }
 h1, h2, h3, {
   font-family: Helvetica, sans-serif;
   font-weight: 400;
-  color: #657036;
+  color: #014a06;
 }
 h1, h2 {
   line-height: 1.1;
@@ -149,26 +149,27 @@ html, body {
 }
 header {
 	display: inline-block;
-	padding: 30px 0;
+	padding: 30px;
+
 }
 header h1 {
 	float: left;
-	margin-left: 30px;	
+	margin-left: 90px;	
 }
 header p a {  
-  text-shadow: rgba(0, 0, 0, 0.4) 0 1px 0;
+  text-shadow: rgba(0, 100, 0, 0.4) 0 1px 0;
   position: absolute;
-  right: 15px;
+  right: 115px;
   top: 45px;
   -webkit-text-stroke: 1px transparent;  
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(0, 0, 0, 0.85);
   text-decoration: none;
 }
 #wrapper {
   width: 85%;
   margin: 0 auto;
-  color: white;
-  background-color: #5B866B;
+  color: #014a06;
+  background-color: #ede8d9;
   -moz-border-radius: 10px / 10px;
   -webkit-border-radius: 10px 10px;
   border-radius: 10px / 10px;
@@ -185,13 +186,11 @@ form {
 label, form p{
   padding: 10px;
 }
-#workshops p {
-  padding-right
-}
-#personalInfo, #workshops, #registration {
+
+#payee, #category, #registration {
   padding-top: 20px;
 }
-input {
+input, select {
     border: 5px solid white; 
     -webkit-box-shadow: 
       inset 0 0 8px  rgba(0,0,0,0.1),
@@ -206,13 +205,19 @@ input {
     background: rgba(255,255,255,0.5);
     margin: 0 0 10px 0;
 }
-input[type=submit], select {
+input[type=submit] {
   padding:5px 15px; 
   background:#ccc; 
   border:5px solid white;
   cursor:pointer;
   -webkit-border-radius: 5px;
   border-radius: 5px; 
+}
+img {
+  width: 10%;
+}
+img:first-of-type{
+  float: left;
 }
 
 
