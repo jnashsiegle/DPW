@@ -8,12 +8,33 @@ class FavoriteMovies(object):
 		#generate a list of movies at the end
 		#calculate time span between movies
 
-	def addMovie(self, m):
+	def add_movie(self, m):
 		self.__movie_list.append(m)
-		print m.title
+		print m.title #prints out title when lib.addMovie(mdx) attribute is attached to movie
 
+	def compile_list(self):
+		output = ''
+		for movie in self.__movie_list: # for each movie in movie array 
+			output += 'Title: ' + movie.title + ' (' + str(movie.year) + ') Directed by: ' + movie.director + '<br />'
+		return output
 
-
+	def calc_time_span(self):
+		'''
+		calculate the time in between movies
+		'''
+		#years
+		years = []
+		for movie in self.__movie_list:
+			years.append(movie.year)
+		#print years #test to see if the above works
+		#sort years from low to high
+		years.sort()
+		print years
+		#subtract the low year from the high year
+		num = len(years) - 1 #0 based this gives us total length minus the 1 for 0 based indexing
+		span = years[num] - years [0] # last number - first number
+		return 'The span between films entered is ' +  str(span)
+		#return the span of time
 
 class MovieData(object): # Data Object
 	def __init__(self):
@@ -24,7 +45,7 @@ class MovieData(object): # Data Object
 
 	@property
 	def year(self):
-	    pass
+	    return self.__year
 
 	@year.setter
 	def year(self, y):
