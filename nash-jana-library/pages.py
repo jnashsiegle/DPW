@@ -29,7 +29,7 @@ class Form(object):
 				<label>Your Name: </label><input type = "text" placeholder = "Name:  " name = "name" />
 				<label>Your Email: </label><input type = "email" placeholder = "Email:  " name = "email" />
 			</div>
-				<label>Your Total Monthly Budget: </label><input type = "text" placeholder = "Total Monthly Budget:  " name = "monBudg" /><br />
+				<label>Your Total Monthly Budget: </label><input type = "text" placeholder = "Total Monthly Expenses:  " name = "monExp" /><br />
 				<label>Your Net Monthly Income: </label><input type = "text" placeholder = "Total Monthly Income:  " name = "monIncome" />
 			<p>Current Budget Useage:</p>
 				<label>Yes, I currently use a budget</label><input type = "radio" name = "budget" value = "do" checked />
