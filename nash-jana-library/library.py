@@ -8,5 +8,16 @@ Wainman
 
 class BudgetBreak(object):
 	pass
-	#set percentages for categories
-	#set calculations
+	'''
+	self.discretion = 0
+
+	@property
+	def discretion(self):
+	    return self.discretion
+
+	@discretion.setter
+	def discretion(self, y):
+		'''
+
+
+	
