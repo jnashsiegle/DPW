@@ -187,7 +187,7 @@ label, form p{
   padding: 10px;
 }
 
-#payee, #category, #registration {
+.payee, .category {
   padding-top: 20px;
 }
 input, select {

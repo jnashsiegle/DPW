@@ -1,12 +1,14 @@
 
 import webapp2
-#from library import 
+from library import TranInfo
 from pages import Form, ResultsPage
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-    	rp = ResultsPage()
+    	#create our form page
     	f = Form()
+    	#create the results view
+    	rp = ResultsPage()
     	#lib =  #instance for the FavoriteMovies
         #movie title  (this is part of our assignment, making it user input)
         #year movie was made(this is part of our assignment)(this is our assignment)
@@ -14,13 +16,21 @@ class MainHandler(webapp2.RequestHandler):
         #for this demo we will be hard-coding the above three line values do not normally do this
         #page for class (if/else for 2 different page views for assignment)
 
-        '''
+        #GET Method to grab variables from user input
+        if self.request.GET:
+            #storing our info from the user inputs
+            tran = TranInfo()
+            tran.payee = self.request.GET['payee']
+            tran.amount = self.request.GET['amount']
+            tran.category = self.request.get_all('category')            
+            tran.budget = self.request.GET['budget']
+            #Print out if form has been submitted otherwise print out following else:
+            self.response.write(rp.print_out())
+        else:           
+        	self.response.write(f.print_out())# this will print out in browser
+        #DO NOT DELETE ABOVE LINE
+       
         
-        ***** call and run function examples
-        lib.calc_time_span()    #adds this to run but we need to add it to the printing out list below
-        p.body = lib.compile_list() + lib.calc_time_span() #adds the compile list to the body tag of the html in the page.py
-        '''
-        self.response.write(f.print_out()) #sends the info out to browser as a big string
         
 
 
