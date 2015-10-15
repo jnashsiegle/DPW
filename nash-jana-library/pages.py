@@ -29,18 +29,20 @@ class Form(object):
 				<label>Your Name: </label><input type = "text" placeholder = "Name:  " name = "name" />
 				<label>Your Email: </label><input type = "email" placeholder = "Email:  " name = "email" />
 			</div>
-				<label>Your Net Monthly Budget: </label><input type = "text" placeholder = "Total Monthly Budget:  " name = "monBudg" />
-							
+				<label>Your Total Monthly Budget: </label><input type = "text" placeholder = "Total Monthly Budget:  " name = "monBudg" /><br />
+				<label>Your Net Monthly Income: </label><input type = "text" placeholder = "Total Monthly Income:  " name = "monIncome" />
 			<p>Current Budget Useage:</p>
-				<label>Yes, I currently use a budget</label><input type = "radio" name = "budget" value = "yes" checked />
-				<label>Naww who needs a budget?</label><input type = "radio" name = "budget"  value = "no"/>
+				<label>Yes, I currently use a budget</label><input type = "radio" name = "budget" value = "do" checked />
+				<label>Naww who needs a budget?</label><input type = "radio" name = "budget"  value = "do not"/>
 			<hr>
 				<input type = "submit" value = "Submit" />
 		'''
 		self.__results = '''
 						<article id = "wrapper">
 						<img src = "img/budget.png" alt = "picture of house on scale">				
-						<h3>Input Expenses</h3> '''
+						<h3>Input Expenses</h3> 
+						'''
+
 		self.__close = '''
 					</form>
 				</article>
@@ -61,26 +63,26 @@ class ResultsPage(object):
 	<head>
 		<title>Where does my money go?</title>
 		<link rel="stylesheet" type="text/css" href="css/style.css">
-	</head>
-	<body>		
-		<header><h1>The many outputs of my budget.</h1>
-		<p><a href = "http://www.bing.com">Exit Form</a></p>
-		</header>
+	</head>"""
+		self.__results = '''
+	<body>				
+		<article id = "wrapper">
+		<header>
+			<img src = "img/budget.png" alt = "picture of house on scale">
+			<h1>Where does my money go?</h1>
+			<p><a href = "http://www.bing.com">Exit Form</a></p>
+		</header>										
+			
 
-		 <article id = "wrapper">
-						<img src = "img/budget.png" alt = "picture of house on scale">				
-						<h3>Transaction Results</h3> """
-
-
-						
-		self.result = ""
-		self.__close = """
+			'''		
+		self.__close = '''
+					
 		</article>
 	</body>
-</html>
-		"""
+</html>'''
+		
 	
 	def print_out(self):
-		all = self.__head + + self.__results + self.__close
+		all = self.__head +  self.__results
 		all = all.format(**locals())   #uses a dictionary-based string formatting
 		return all
