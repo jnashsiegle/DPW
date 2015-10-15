@@ -13,7 +13,7 @@ class MainHandler(webapp2.RequestHandler):
     	f = Form()
     	#create the results view
     	rp = ResultsPage()
-
+        
     	#GET Method to grab variables from user input
         if self.request.GET:
             #storing our info from the user inputs
@@ -26,7 +26,8 @@ class MainHandler(webapp2.RequestHandler):
             user.have_budget = self.request.GET['budget']
             #Print out if form has been submitted otherwise print out following else:
             #self.response.write(rp.print_out())
-            self.response.write(rp.print_out() + 'Your name is: ' +  user.name + '<br />' +  'Your email is: ' + user.email + '<br />' + 'The total of your recurring monthly expenses is: ' + str(user.__mon_exp) + '<br />' + ' Your total monthly income is: ' + str(user.__mon_income) + '<br />' + 'You ' + user.have_budget + ' use a budget to track your expenses and income.'  )
+            rp.__results = user.mortgage() + user.annual_income()
+            self.response.write(rp.print_out() + 'Your name is: ' +  user.name + '<br />' +  'Your email is: ' + user.email + '<br />' + 'The total of your recurring monthly expenses is: ' + str(user.__mon_exp) + '<br />' + ' Your total monthly income is: ' + str(user.__mon_income) + '<br />' +  'Your ' + user.have_budget + ' use a budget to track your expenses and income.' + '<br />' +'Your estimated mortgage allowance should be ' + str(user.mortgage))
         else:           
         	self.response.write(f.print_out())# this will print out in browser
         #DO NOT DELETE ABOVE LINE

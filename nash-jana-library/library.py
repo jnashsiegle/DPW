@@ -16,14 +16,15 @@ class BudgetBreak(object):
 	@property
 	def mon_exp(self):
 	    return self.__mon_exp	
+	    
 
 	@property
 	def mon_income(self):
 	    return self.__mon_income	
 
-	'''def discretion(self):
-		self.discretion = self.__mon_income - self.__mon_exp
-	    return self.discretion
+	#def discretion(self):
+		#self.discretion = self.__mon_income - self.__mon_exp
+	    #return self.discretion
 
 	def mortgage(self):
 		self.mortgage = self.__mon_income * .25
@@ -31,7 +32,7 @@ class BudgetBreak(object):
 
 	def annual_income(self):
 		self.annual_income = self.__mon_income * 12
-		return self.annual_income'''
+		return self.annual_income
 		
 
 
