@@ -4,8 +4,8 @@ Wainman
 10/14/2015
 """
 
-class UserInfo(object):
-	pass
 
 class BudgetBreak(object):
 	pass
+	#set percentages for categories
+	#set calculations
