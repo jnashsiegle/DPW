@@ -5,6 +5,7 @@ Wainman
 """
 
 
+
 class BudgetBreak(object):
 	pass
 	#set percentages for categories
