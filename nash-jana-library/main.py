@@ -1,24 +1,33 @@
-#!/usr/bin/env python
-#
-# Copyright 2007 Google Inc.
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-#
+"""created by Jana Nash-Siegle
+DPW 101501
+Wainman
+10/14/2015
+"""
 import webapp2
+from library import UserInfo, BudgetBreak
+from pages import Form, ResultsPage
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        self.response.write('Hello world!')
+        #create our form page
+    	f = Form()
+    	#create the results view
+    	rp = ResultsPage()
+
+    	#GET Method to grab variables from user input
+        if self.request.GET:
+            #storing our info from the user inputs
+            #call our UserInfo Object
+            user = UserInfo()
+            user.name = self.request.GET['name']
+            user.email = self.request.GET['email']
+            user.mon_bud = self.request.GET['monBudg']           
+            user.have_budget = self.request.GET['budget']
+            #Print out if form has been submitted otherwise print out following else:
+            self.response.write(rp.print_out())
+        else:           
+        	self.response.write(f.print_out())# this will print out in browser
+        #DO NOT DELETE ABOVE LINE
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
