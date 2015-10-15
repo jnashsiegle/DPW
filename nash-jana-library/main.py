@@ -26,7 +26,7 @@ class MainHandler(webapp2.RequestHandler):
             user.have_budget = self.request.GET['budget']
             #Print out if form has been submitted otherwise print out following else:
             #self.response.write(rp.print_out())
-            self.response.write(rp.print_out() + 'Your name is: ' +  user.name + 'Your email is: ' + user.email + 'The total of your recurring monthly expenses is: ' + user. mon_bud + ' Your total monthly income is: ' + user.mon_income + 'You do ' + user.have_budget + ' use a budget to track your expenses and income.'  )
+            self.response.write(rp.print_out() + 'Your name is: ' +  user.name + '<br />' +  'Your email is: ' + user.email + '<br />' + 'The total of your recurring monthly expenses is: ' + user. mon_bud + '<br />' + ' Your total monthly income is: ' + user.mon_income + '<br />' + 'You do ' + user.have_budget + ' use a budget to track your expenses and income.'  )
         else:           
         	self.response.write(f.print_out())# this will print out in browser
         #DO NOT DELETE ABOVE LINE
