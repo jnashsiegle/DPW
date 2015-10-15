@@ -58,6 +58,7 @@ class Form(object):
 class ResultsPage(object):
 	def __init__(self):
 		self.__head = """
+
 <!DOCTYPE HTML>							
 <html>
 	<head>
