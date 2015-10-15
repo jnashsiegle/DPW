@@ -142,7 +142,7 @@ class ResultsPage(object):
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
 	<body>		
-		<header><h1>Where does my money go?</h1>
+		<header><h1>The many outputs of my budget.</h1>
 		<p><a href = "http://www.bing.com">Exit Form</a></p>
 		</header>
 
