@@ -159,6 +159,6 @@ class ResultsPage(object):
 		"""
 	
 	def print_out(self):
-		all = self.__head + self.result + self.__close
+		all = self.__head + self.__close
 		all = all.format(**locals())   #uses a dictionary-based string formatting
 		return all
