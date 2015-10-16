@@ -1,0 +1,219 @@
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* CSS RESET
+==================================================================================================== 
+====================================================================================================
+*/
+html, body, div, main, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, input, textarea,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video,
+::before, ::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+header::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+select {
+    padding:3px;
+    overflow-y: hidden;
+    margin: 0;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    border-radius:4px;
+    -webkit-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+    -moz-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+    box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+    background: #ffd20f;
+    color:#014a06;
+    border:none;
+    outline:none;
+    display: inline-block;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    cursor:pointer;
+}
+
+/*======================================================================
+TYPOGRAPHY
+====================================================================== */
+/*
+#014a06 = dark green (font)
+#ede8d9 = cream (background)
+#ffd20f - yellow (highlighting)
+#ff372d - red (error)
+#89d4f5 - powder blue , input::after*/
+header::after, input::before, input::after{
+  content: "";
+  display: table;
+  clear: both; 
+}
+html, body {
+  font-size: 12px;
+  font-size: 1rem;
+}
+body {
+  font-family: Helvetica, sans-serif;
+  color: #014a06;   
+  line-height: 2;
+  background-color: #89d4f5;
+}
+header {  
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+  width: 100%;
+  background-color: #ede8d9;
+}
+h1, h2, h3, {
+  font-family: Helvetica, sans-serif;
+  font-weight: 400;
+  color: #014a06;
+}
+h1, h2 {
+  line-height: 1.1;
+}
+h3{
+  line-height: 1.3;
+}
+h2, h3 {
+  text-transform: uppercase;
+}
+h1 {
+  font-size: 3em;  
+  font-weight: 100;
+  text-transform: capitalize;
+  letter-spacing: -2px;  
+}
+h2 {
+  font-size: 2.5em;
+  margin: 10px 0 20px 0;
+  letter-spacing: -1px;
+}
+h3 {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+p {
+  font-size: 1rem;
+  font-weight: 400;
+}
+footer {
+  font-size: 0.75rem;
+}
+/*======================================================================
+STYLE
+====================================================================== */
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  position: relative;
+}
+header {
+	display: inline-block;
+	padding: 30px;
+}
+header img {
+  display: inline;
+  float: left;
+  width: 20%;
+}
+header p a {  
+  text-shadow: rgba(0, 100, 0, 0.4) 0 1px 0;
+  position: absolute;
+  right: 200px;
+  bottom: 20px;
+  -webkit-text-stroke: 1px transparent;  
+  color: rgba(0, 0, 0, 0.85);
+  text-decoration: none;
+}
+#wrapper {
+  position: relative;
+  width: 65%;
+  margin: 0 auto;
+  color: #014a06;
+  background-color: #ede8d9;
+  -moz-border-radius: 10px / 10px;
+  -webkit-border-radius: 10px 10px;
+  border-radius: 10px / 10px;
+  padding: 30px;
+}
+form {
+  text-align: left;
+  margin-left: 100px;
+  padding-top: 40px;
+}
+label, form p{
+  padding: 10px;
+}
+input, select {
+    border: 5px solid white; 
+    -webkit-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    -moz-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    padding: 5px;
+    background: rgba(255,255,255,0.5);
+    margin: 0 0 10px 0;
+}
+input[type=submit] {
+  position: absolute;
+  right: 50px;
+  bottom: 0;
+  padding:5px 15px; 
+  background:#ccc; 
+  border:5px solid white;
+  cursor:pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 5px; 
+}
+hr{
+  margin-bottom: 50px;
+}
+
+
+
+
