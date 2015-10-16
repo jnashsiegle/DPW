@@ -213,6 +213,9 @@ input[type=submit] {
 hr{
   margin-bottom: 50px;
 }
+p a{
+  float: right;
+}
 
 
 

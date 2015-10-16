@@ -31,8 +31,16 @@ class MainHandler(webapp2.RequestHandler):
             #RESULTS PAGE - INFORMATION 
             #Print out if form has been submitted otherwise print out following else:
             rp.email = user.email  #setting for print out
+            rp.annual = user.annual()
             rp.discretion = user.discretion()
-            self.response.write(rp.print_out() + '<h3>Greetings, ' +  user.name + '!</h3>')
+            rp.name = user.name
+            rp.mon_income = user.mon_income
+            rp.mon_exp = user.mon_exp
+            rp.calc_mortgage = user.calc_mortgage()
+            #WOOOHOOOOOOO
+            
+
+            self.response.write(rp.print_out())
         else:           
         	self.response.write(f.print_out())# this will print out in browser
         #DO NOT DELETE ABOVE LINE

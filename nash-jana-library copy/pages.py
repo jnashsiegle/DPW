@@ -58,7 +58,11 @@ class Form(object):
 class ResultsPage(object):
 	def __init__(self):
 		self.email = ''
+		self.name = ''
 		self.discretion = 0
+		self.annual_income = 0
+		self.__mon_exp = 0
+		self.__mon_income = 0
 		self.__head = """
 
 <!DOCTYPE HTML>							
@@ -75,13 +79,22 @@ class ResultsPage(object):
 		<header>
 			<img src = "img/budget.png" alt = "picture of house on scale">
 			<h1>Where does my money go?</h1>
-			<p><a href = "http://www.bing.com">Exit Form</a></p>
+			
 		</header>	
 		'''
-		self.html = '''									
-			<p>{self.email}</p>
-			<p>{self.discretion}</p>
-			<p> Helloooooooo!</p>
+		self.html = '''
+			<h3>Greetings! {self.name}</h3>
+			<p>You have informed us that the best way to contact you in regards to your budget analysis is by email.</p>
+			<p>Your email address is {self.email}</p>
+			<h4>From the information provided we have calculated the following information for you: </h4>								
+			<p>Your annual income is: ${self.annual}</p>
+			<p>Your discretionary funds at this time that are available for use after paying your bills are ${self.discretion}</p>
+			<p>The total of your recurring monthly expenses is: ${self.mon_exp}</p>
+			<p>The total of your monthly income from all sources is: ${self.mon_income}</p>
+			<p>The amount estimated by our algorithms that is allowable for you to spend on mortgage/rent is: ${self.calc_mortgage}</p>
+			<p><a href = "http://www.bing.com">Exit Form</a></p>
+
+
 
 
 			'''		

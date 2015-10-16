@@ -13,7 +13,8 @@ class BudgetBreak(object):
 		self.__mon_exp = 0
 		self.__mon_income = 0	
 		self.disc_income = 0
-		self.annual_income = 0	
+		self.annual_income = 0
+		
 
 	def annual(self):
 		return self.__mon_income * 12
