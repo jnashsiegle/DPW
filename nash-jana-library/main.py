@@ -30,7 +30,7 @@ class MainHandler(webapp2.RequestHandler):
 
             #RESULTS PAGE - INFORMATION 
             #Print out if form has been submitted otherwise print out following else:
-            self.response.write(rp.print_out() + '<p>Your name is: ' +  user.name + '<br />' +  'Your email is: ' + user.email + '</p>' + 'The total of your recurring monthly expenses is: ' + str(user.__mon_exp) + '<br />' + ' Your total monthly income is: ' + str(user.__mon_income) + '<br />' + 'Your total monthly discretionary funds comes to ' + str(user.discretion()) + '<br />' +  'You ' + user.have_budget + ' use a budget to track your expenses and income.' + '<br />' +'Your estimated mortgage allowance should be ' + str(user.calc_mortgage()) + '<br />' + 'Your annual income is: ' + str(user.annual()))
+            self.response.write(rp.print_out() + '<h3>Greetings, ' +  user.name + '!</h3>' +  'From the information provided we have calculated the following information.<br/>' + 'Your email is: ' + user.email + '</p>' + 'The total of your recurring monthly expenses is: ' + str(user.__mon_exp) + '<br />' + ' Your total monthly income is: ' + str(user.__mon_income) + '<br />' + 'Your total monthly discretionary funds comes to ' + str(user.discretion()) + '<br />' +  'You ' + user.have_budget + ' use a budget to track your expenses and income.' + '<br />' +'Your estimated mortgage allowance should be ' + str(user.calc_mortgage()) + '<br />' + 'Your annual income is: ' + str(user.annual()))
         else:           
         	self.response.write(f.print_out())# this will print out in browser
         #DO NOT DELETE ABOVE LINE
