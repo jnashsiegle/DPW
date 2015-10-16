@@ -13,17 +13,7 @@ class BudgetBreak(object):
 		self.__mon_exp = 0
 		self.__mon_income = 0	
 		self.discretion = 0
-		self.annual_income = 0
-
-	'''@property
-	def mon_exp(self):
-	    return self.__mon_exp	
-
-
-	@property
-	def mon_income(self):
-	    return self.__mon_income'''	
-	
+		self.annual_income = 0	
 
 	def annual_income(self):
 		return self.__mon_income * 12
@@ -32,7 +22,7 @@ class BudgetBreak(object):
 	def discretion(self):
 		return self.__mon_income - self.__mon_exp
 
-	def calcMortgage(self):
+	def calc_mortgage(self, __mon_income):
 		return self.__mon_income * 0.25
 
 		#getting monthly expense access
@@ -50,16 +40,11 @@ class BudgetBreak(object):
 	def mon_income(self):
 	    return self.__mon_income
 
+	    #setting new variable for monthly income
 	@mon_income.setter
 	def mon_income(self, i):
 		self.__mon_income = i	
 
-
-	def getIncome(self):
-		return self.__mon_income
-
-	def setIncome(self, i):
-		self.__mon_income = i
 
 		
 
