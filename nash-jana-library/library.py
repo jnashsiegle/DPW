@@ -12,17 +12,17 @@ class BudgetBreak(object):
 		self.email = ''
 		self.__mon_exp = 0
 		self.__mon_income = 0	
-		self.discretion = 0
+		self.disc_income = 0
 		self.annual_income = 0	
 
-	def annual_income(self):
+	def annual(self):
 		return self.__mon_income * 12
 		
 
 	def discretion(self):
 		return self.__mon_income - self.__mon_exp
 
-	def calc_mortgage(self, __mon_income):
+	def calc_mortgage(self):
 		return self.__mon_income * 0.25
 
 		#getting monthly expense access
