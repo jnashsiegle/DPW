@@ -30,7 +30,7 @@ class MainHandler(webapp2.RequestHandler):
 
             #RESULTS PAGE - INFORMATION 
             #Print out if form has been submitted otherwise print out following else:
-            rp.email = user.email  #setting for print out
+            rp.email = user.email  #setting for print out of HTML elements on pages.py
             rp.annual = user.annual()
             rp.discretion = user.discretion()
             rp.name = user.name
