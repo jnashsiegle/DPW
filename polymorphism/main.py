@@ -1,5 +1,5 @@
 '''
-Inheritance Demo
+Polymorphism Demo
 '''
 import webapp2
 
@@ -7,7 +7,7 @@ class MainHandler(webapp2.RequestHandler):
     def get(self):
     	p = FormPage() #still uses page attributes except for private
     	p.inputs = [['first_name', 'text', 'First Name'], ['last_name', 'text', 'Last Name'], ['Submit', 'submit']]
-	self.response.write(p.print_out_form())
+	self.response.write(p.print_out())
         
 
 class Page(object):  #borrowing stuff from the object class  | ABSTRACT CLASS ONLY EXISTS TO BE THE SUPER TO THE SUBS THERE IS NO INSTANCE OF PAGE
@@ -16,7 +16,7 @@ class Page(object):  #borrowing stuff from the object class  | ABSTRACT CLASS ON
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Inheritance</title>
+		<title>PolyMorphism</title>
 	</head>
 	<body>'''
 
@@ -70,8 +70,9 @@ class FormPage(Page): #subclass of Page, which is why Page is in ()
 				'''
 		print self._form_inputs
 
-	def print_out_form(self):
-		return self._head + self._body + self._form_open + self._form_inputs + self._form_close + self._close
+	#POLYMORPHISM ALERT!!!!! -----METHOD OVERRIDING  | SAME AS ABOVE, THIS IS LAST SO OVERRIDES THE ABOVE
+	def print_out(self):
+		return self._head + self._body + self._form_open + '<p>hellooooo out there!!</p>' + self._form_inputs + self._form_close + self._close
 
 
 
