@@ -26,22 +26,27 @@ class Page(object):
 		<h1>Classes</h1>
 		<p>A class is the primary adventuring style of a player character which determines the type of weapons and armor it can use, as well as what abilities, powers, skills, and spells it will gain throughout its adventures.</p>
 		<div id = "class_display"><img src = "img/druid.png" alt = "Druid"><img src = "img/hunter.png" alt = "Hunter"><img src = "img/mage.png" alt = "Mage"><img src = "img/monk.png" alt = "Monk"><img src = "img/paladin.png" alt = "Paladin"><img src = "img/priest.png" alt = "Priest"><img src = "img/rogue.png" alt = "Rogue"><img src = "img/shaman.png" alt = "Shaman"><img src = "img/warlock.png" alt = "Warlock"><img src = "img/warrior.png" alt = "Warrior"></div>
-									
-			
+		
+		</article>
+		'''								
+		self.footer = '''
+		<p>&copy;2015, Jana Nash-Siegle</p>
+		<small>All images of World of Warcraft are the property of <a href = "http://eu.blizzard.com/en-gb/company/about/legal-faq.html" >Blizzard Entertainment.</a><br />
+		This site is in no way affiliated with World of Warcraft or Blizzard Entertainment.  It has been created for personal use fulfilling the sole purpose of fulfilling a school project.</small>
 					
 					
 					
 					
 		'''
 		self.close = '''
-					</form>
-				</article>
+					
+				
 	</body>
 </html>'''
 		
 	    
 	
 	def print_out(self):			#defines a method to print out the form that we will call over in main.py
-		all =  self.head + self.header +  self.body + self.close  #sets the variable all to be all the sections.
+		all =  self.head + self.header +  self.body + self.footer + self.close  #sets the variable all to be all the sections.
 		all = all.format(**locals())   #uses a dictionary-based string formatting
 		return all
