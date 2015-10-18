@@ -65,7 +65,7 @@ class CharPage(Page):
 	#subclass of Page
 	#contents of char specific info
 		super(CharPage, self).__init__()
-		self.title = ''
+		self._title = ''
 		self.type = ''
 		self.standard = ''
 		self.armor = ''
@@ -77,21 +77,31 @@ class CharPage(Page):
 		self._html = '''
 		<article id = "wrapper">
 		<p>Hellooooooo????  Yay!  We are here!</p>
-		<h1>{self.title}</h1>
+		<h1> We are in an H1..there is a self.title inside this h1 too..but it doesn't want to print {self.title}</h1>
 		<h1>{self.armor}</h1>
 		<h1>{self.weapons}</h1>
-		<a href = "index.yaml" alt = "yeah yeah I know it doesn't work"><p>Go Back</p>		
+		<a href = "" alt = "yeah yeah I know it doesn't work"><p>Go Back</p>		
 		'''	
 		self._html_close = '''
 		</article>
 		'''
+	#getters/ setters for variables
+	#this one for self._html works	
 	@property
 	def html(self):
 		return self._html
 	@html.setter
 	def html(self, h):
 		#change my private inputs variable
-		pass
+		return
+
+		#this one is not...I'm assuming I need this to fill in the h1's up there 
+	@property 
+	def title(self):
+		return self._title
+	@title.setter
+	def title(self, n):
+		self._title = n
 
 #print out individual character class when called up via img click
 	def print_out_char(self):			#defines a method to print out the form that we will call over in main.py

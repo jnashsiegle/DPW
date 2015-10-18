@@ -27,7 +27,7 @@ class Data(object):
 		warrior.armor = 'Cloth, Leather, Mail, Plate, Shields'
 		warrior.weapons = 'Daggers, Fist Weapons, One-Handed Axes, One-Handed Maces, One-Handed Swords, Polearms, Staves, Two-Handed Axes, Two-Handed Maces, Two-Handed Swords'
 		warrior.image = 'img/warrior.png'
-		
+
 	#second instance of CharClass
 	
 		paladin = CharClass()
@@ -39,6 +39,9 @@ class Data(object):
 		paladin.image = 'img/paladin.png'
 
 
-	#array of Data Objects from CharClass Instances
+	#array of Data Objects from CharClass Instances used on main.py
 		self.class_arr = [warrior, paladin]
+		
+
+				
 	
