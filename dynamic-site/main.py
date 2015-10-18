@@ -21,16 +21,8 @@ class MainHandler(webapp2.RequestHandler):
 
 		#GET Method - depending on class_list
 		if self.request.GET:
-			'''char = Data()
-			char.title = self.title	
-			char.type = self.type	
-			char.standard = self.standard	
-			char.armor = self.armor	
-			char.weapons = self.weapons	
-			char.image = self.image	
-			print char'''
 			char = self.request.GET['char']
-			print char
+			print char + " is in the url"  #prints out self.title aka warrior in console
 			#send  to setter on image
 			if char == "warrior":
 				print d.class_arr[0]

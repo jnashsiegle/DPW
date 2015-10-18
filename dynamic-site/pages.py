@@ -45,9 +45,9 @@ class Page(object):
 		'''
 		#repetive footer content for all pages						
 		self._footer = '''
-		<p>&copy;2015, Jana Nash-Siegle</p>
+		<footer>&copy;2015, Jana Nash-Siegle
 		<small>All images of World of Warcraft are the property of <a href = "http://eu.blizzard.com/en-gb/company/about/legal-faq.html" >Blizzard Entertainment.</a><br />
-		This site is in no way affiliated with World of Warcraft or Blizzard Entertainment.  It has been created for personal use fulfilling the sole purpose of fulfilling a school project.</small>
+		This site is in no way affiliated with World of Warcraft or Blizzard Entertainment.  It has been created for personal use fulfilling the sole purpose of fulfilling a school project.</small></footer>
 		'''
 		self._close = '''
 	</body>
@@ -65,25 +65,35 @@ class CharPage(Page):
 	#subclass of Page
 	#contents of char specific info
 		super(CharPage, self).__init__()
-		self.__html = '''
+		self.title = ''
+		self.type = ''
+		self.standard = ''
+		self.armor = ''
+		self.weapons = ''
+		self._html = ''
+		self._html_close = ''
+		
+		self._html = '''
+		<article id = "wrapper">
+		<p>Hellooooooo????  Yay!  We are here!</p>
 		<h1>{self.title}</h1>
 		<h1>{self.armor}</h1>
 		<h1>{self.weapons}</h1>
-		<img src = {self.image}>
+		<a href = "index.yaml"><p>Go Back</p>		
 		'''	
-		self._html_close = ''
-
+		self._html_close = '''
+		</article>
+		'''
 	@property
 	def html(self):
-		return self.__html
+		return self._html
 	@html.setter
 	def html(self, h):
 		#change my private inputs variable
-		self.__html = h #assigning arr (array) to my private inputs variable
-		#print h #test to see if it's printing through console (mega array all on one line)
+		pass
 
 #print out individual character class when called up via img click
 	def print_out_char(self):			#defines a method to print out the form that we will call over in main.py
-		all =  self._head + self._header +  self._main + str(self.__html) + self._html_close + self._footer + self._close  
-		all = all.format(**locals())   #uses a dictionary-based string formatting
+		all =  self._head + self._header +  self._html + self._html_close + self._footer + self._close  
+		all = all.format(**locals())   
 		return all
