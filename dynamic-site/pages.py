@@ -72,14 +72,15 @@ class CharPage(Page):
 		self.weapons = ''
 		self._html = ''
 		self._html_close = ''
-		
+			
+		#let's make the html now
 		self._html = '''
 		<article id = "wrapper">
 		<p>Hellooooooo????  Yay!  We are here!</p>
 		<h1>{self.title}</h1>
 		<h1>{self.armor}</h1>
 		<h1>{self.weapons}</h1>
-		<a href = "index.yaml"><p>Go Back</p>		
+		<a href = "index.yaml" alt = "yeah yeah I know it doesn't work"><p>Go Back</p>		
 		'''	
 		self._html_close = '''
 		</article>

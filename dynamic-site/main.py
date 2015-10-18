@@ -22,14 +22,12 @@ class MainHandler(webapp2.RequestHandler):
 		#GET Method - depending on class_list
 		if self.request.GET:
 			char = self.request.GET['char']
-			print char + " is in the url"  #prints out self.title aka warrior in console
-			#send  to setter on image
-			if char == "warrior":
-				print d.class_arr[0]
-				p.html = d.class_arr[0]
-			elif char == "paladin":
-				print d.class_arr[1]
-				p.html = d.class_arr[1]
+			#see if the correct class prints in console when image link is selected
+			print char	
+			#yes it is	
+
+
+			
 
 			#this should now print out character specifics to browser
 			self.response.write(p.print_out_char())
