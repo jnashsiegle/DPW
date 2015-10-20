@@ -156,34 +156,18 @@ article{
   margin: 0 auto;
 }
 #wrapper img{
-   float: left;
-    width: 25%;
-    height: 25%;
-    position: absolute;
-    border: 1px solid #333;    
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  width: 150px;
+  height: 150px;  
+  border: 1px solid #ffffff;
 }
-a img{
-    display: block;
-    width: 100%;
-    height: 100%;
-    -webkit-transition-property: width, height; /* we specify, what properties we need to change*/
-    -webkit-transition-duration: 300ms; /* we specify, with what speed it is necessary to return an image in its initial look*/
-    -moz-transition-property: width, height;
-    -moz-transition-duration: 300ms;
-    -o-transition-property: width, height;
-    -o-transition-duration: 300ms;
-    position: absolute;
-    opacity: 0.3; /* add opacity*/
-    cursor: pointer;
-}
-
-a:hover img{
+#wrapper img:hover{
   border:1px solid #0000ff;
 }
-
 #wrapper p.caption{
   text-align: center;
-  vertical-align: middle
   font-weight: normal;    
   margin: 0 auto;
 }
