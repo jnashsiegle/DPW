@@ -57,7 +57,7 @@ colors:
 #409cc3 - medium blue (background for wrapper)
 #90e2f4 - light blue
 */
-header::after, input::before, input::after{
+header::after, footer::before{
   content: "";
   display: table;
   clear: both; 
@@ -70,17 +70,20 @@ body {
   font-family: Helvetica, sans-serif;
   color: #014a06;   
   line-height: 2;
-  background-color: #89d4f5;
+  background: #89d4f5 url("../img/bkg.jpg") no-repeat fixed center;
 }
-header {  
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+header { 
+  color: white; 
+  text-shadow: 0 3px 0 rgba(255, 255, 255, 0.5);
   width: 100%;
-  background-color: #ede8d9;
+  background: #ede8d9 url("../img/header_bkg.jpg") no-repeat;
+  background-size: 100%, 100%;
 }
 h1, h2, h3, {
   font-family: Helvetica, sans-serif;
   font-weight: 400;
   color: #014a06;
+
 }
 h1, h2 {
   line-height: 1.1;
@@ -132,42 +135,65 @@ html, body {
 }
 header {
 	display: inline-block;
-	padding: 30px;
+	padding: 30px;  
 }
-header img {
-  display: inline;
-  float: left;
-  width: 20%;
-}
-header p a {  
-  text-shadow: rgba(0, 100, 0, 0.4) 0 1px 0;
-  position: absolute;
-  right: 200px;
-  bottom: 20px;
-  -webkit-text-stroke: 1px transparent;  
-  color: rgba(0, 0, 0, 0.85);
-  text-decoration: none;
+#class_display{
+  border: 3px double #080a29;
 }
 #wrapper {
   position: relative;
-  width: 100%;
+  width: 45%;
+  display: inline-block;
+  float: left;
   margin: 0 auto;
   color: #014a06;
-  background-color: #ede8d9;
-  -moz-border-radius: 10px / 10px;
-  -webkit-border-radius: 10px 10px;
-  border-radius: 10px / 10px;
+  background-color: #ede8d9;  
   padding: 30px;
+}
+article{
+  width: 175px;
+  display: inline-block;
+  margin: 0 auto;
+}
+#wrapper img{
+   float: left;
+    width: 25%;
+    height: 25%;
+    position: absolute;
+    border: 1px solid #333;    
+}
+a img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    -webkit-transition-property: width, height; /* we specify, what properties we need to change*/
+    -webkit-transition-duration: 300ms; /* we specify, with what speed it is necessary to return an image in its initial look*/
+    -moz-transition-property: width, height;
+    -moz-transition-duration: 300ms;
+    -o-transition-property: width, height;
+    -o-transition-duration: 300ms;
+    position: absolute;
+    opacity: 0.3; /* add opacity*/
+    cursor: pointer;
+}
+
+a:hover img{
+  border:1px solid #0000ff;
+}
+
+#wrapper p.caption{
+  text-align: center;
+  vertical-align: middle
+  font-weight: normal;    
+  margin: 0 auto;
 }
 #wrapper2 {
   position: relative;
-  width: 85%;
-  margin: 0 auto;
+  width: 45%;
+  display: inline-block;
+  /*margin: 0 auto; */
   color: #014a06;
-  background-color: #ffffff;
-  -moz-border-radius: 10px / 10px;
-  -webkit-border-radius: 10px 10px;
-  border-radius: 10px / 10px;
+  background-color: #ffffff;  
   padding: 30px;
 }
 

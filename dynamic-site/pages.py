@@ -19,29 +19,28 @@ class Page(object):   #abstract class
 	<body>
 	''' #repetitive header for top of all pages page
 		self._header = '''
-		<header><h1>Ready for a little excitement?</h1>
-				<h1>Up for a challenge? Want a little class in life?</h1>
-				<h1>What type of personality are you?</h1>
+		<header><h1>Up for a challenge? Want a little class in life?</h1>				
 		</header> '''
 		#repetitive main content for all pages
 		self._main = '''
-		<article id = "wrapper">
+		<section id = "wrapper">
 		<h1>Classes</h1>
 		<p>A class is the primary adventuring style of a player character which determines the type of weapons and armor it can use, as well as what abilities, powers, skills, and spells it will gain throughout its adventures.</p>
 		<div id = "class_display">
-			<a href = "?char=warrior"><img src = "img/warrior.png" alt = "Warrior"></a>
-			<a href = "?char=paladin"><img src = "img/paladin.png" alt = "Paladin"></a>
-			<a href = "?char=hunter"><img src = "img/hunter.png" alt = "Hunter"></a>
-			<a href = "?char=rogue"><img src = "img/rogue.png" alt = "Rogue"></a>
-			<a href = "?char=priest"><img src = "img/priest.png" alt = "Priest"></a>
-			<a href = "?char=death_knight"><img src = "img/deathknight.png" alt = "Death Knight"></a>
-			<a href = "?char=shaman"><img src = "img/shaman.png" alt = "Shaman"></a>
-			<a href = "?char=mage"><img src = "img/mage.png" alt = "Mage"></a>
-			<a href = "?char=warlock"><img src = "img/warlock.png" alt = "Warlock"></a>
-			<a href = "?char=monk"><img src = "img/monk.png" alt = "Monk">
-			<a href = "?char=druid"><img src = "img/druid.png" alt = "Druid">
+			<article><p class = "caption"><a href = "?char=warrior"><img src = "img/warrior.png" alt = "Warrior"></a>Warrior</p></article>
+			<article><p class = "caption"><a href = "?char=paladin"><img src = "img/paladin.png" alt = "Paladin"></a>Paladin</p></article>
+			<article><p class = "caption"><a href = "?char=hunter"><img src = "img/hunter.png" alt = "Hunter"></a>Hunter</p></article>
+			<article><p class = "caption"><a href = "?char=rogue"><img src = "img/rogue.png" alt = "Rogue"></a>Rogue</p></article>
+			<article><p class = "caption"><a href = "?char=priest"><img src = "img/priest.png" alt = "Priest"></a>Priest</p></article>
+			<article><p class = "caption"><a href = "?char=death_knight"><img src = "img/deathknight.png" alt = "Death Knight"></a>Death Knight</p></article>
+			<article><p class = "caption"><a href = "?char=shaman"><img src = "img/shaman.png" alt = "Shaman"></a>Shaman</p></article>
+			<article><p class = "caption"><a href = "?char=mage"><img src = "img/mage.png" alt = "Mage"></a>Mage</p></article>
+			<article><p class = "caption"><a href = "?char=warlock"><img src = "img/warlock.png" alt = "Warlock"></a>Warlock</p></article>
+			<article><p class = "caption"><a href = "?char=monk"><img src = "img/monk.png" alt = "Monk"></a>Monks</p></article>
+			<article><p class = "caption"><a href = "?char=druid"><img src = "img/druid.png" alt = "Druid"></a>Druids</p></article>
+			
 			</div>
-		</article>
+		</section>
 		'''
 		#repetive footer content for all pages						
 		self._footer = '''
@@ -76,7 +75,7 @@ class CharPage(Page):
 			
 		#let's make the html now
 		self._html = '''
-		<article id = "wrapper2">
+		<section id = "wrapper2">
 		<h1>{self.title}</h1>
 		<p>{self.desc}</p>
 		<p>{self.title} Combat Type = {self.type}</p>
@@ -86,7 +85,7 @@ class CharPage(Page):
 		<img src = {self.image} alt = '{self.title}'>				
 		'''	
 		self._html_close = '''
-		</article>
+		</section>
 		'''
 	#getters/ setters for variables
 	#this one for self._html works	
