@@ -70,17 +70,20 @@ class CharPage(Page):
 		self.standard = ''
 		self.armor = ''
 		self.weapons = ''
+		self.desc = ''
 		self._html = ''
 		self._html_close = ''
 			
 		#let's make the html now
 		self._html = '''
 		<article id = "wrapper2">
-		<p>Hellooooooo????  Yay!  We are here!</p>
-		<h1> We are in an H1..there is a self.title inside this h1 too..but it doesn't want to print {self.title}</h1>
-		<h1> Armor = {self.armor}</h1>
-		<h1> Weapons = {self.weapons}</h1>
-				
+		<h1>{self.title}</h1>
+		<p>{self.desc}</p>
+		<p>{self.title} Combat Type = {self.type}</p>
+		<p>{self.title} Standard = {self.standard}</p>
+		<p>Armor Available to {self.title} = {self.armor}</p>
+		<p>Weapons that {self.title}'s Use:  {self.weapons}</p>
+		<img src = {self.image} alt = '{self.title}'>				
 		'''	
 		self._html_close = '''
 		</article>

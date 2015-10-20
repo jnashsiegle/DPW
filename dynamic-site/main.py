@@ -29,11 +29,23 @@ class MainHandler(webapp2.RequestHandler):
 			if char == "warrior":
 				print d.class_arr[0].title, d.class_arr[0].armor, d.class_arr[0].weapons
 				p.title = d.class_arr[0].title
+				p.type = d.class_arr[0].type
+				p.standard = d.class_arr[0].standard
 				p.armor = d.class_arr[0].armor
-				p.html = d.class_arr[0].title, d.class_arr[0].armor, d.class_arr[0].weapons #links p.html to the class_arr in Data(), opening up the variables to the html in pages I am hoping?
+				p.weapons = d.class_arr[0].weapons
+				p.image = d.class_arr[0].image
+				p.desc = d.class_arr[0].desc
+				#p.html = d.class_arr[0].title, d.class_arr[0].armor, d.class_arr[0].weapons #links p.html to the class_arr in Data(), opening up the variables to the html in pages I am hoping?
 			elif char == "paladin":
 				print d.class_arr[1].title, d.class_arr[1].armor, d.class_arr[1].weapons
-				p.html = d.class_arr[1].title, d.class_arr[1].armor, d.class_arr[1].weapons
+				p.title = d.class_arr[1].title
+				p.type = d.class_arr[1].type
+				p.standard = d.class_arr[1].standard
+				p.armor = d.class_arr[1].armor
+				p.weapons = d.class_arr[1].weapons
+				p.image = d.class_arr[1].image
+				p.desc = d.class_arr[1].desc
+				
 
 			#this should now print out character specifics to browser
 			self.response.write(p.print_out_char())
