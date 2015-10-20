@@ -5,7 +5,7 @@ DPW - 01
 Dynamic Site - Project 3
 '''
 #set up our base page this will be a page in abstract.  
-class Page(object):
+class Page(object):   #abstract class
 	def __init__(self):
 		print "Base created" #test for our base
 		#invisible heading info for pages
@@ -30,7 +30,7 @@ class Page(object):
 		<p>A class is the primary adventuring style of a player character which determines the type of weapons and armor it can use, as well as what abilities, powers, skills, and spells it will gain throughout its adventures.</p>
 		<div id = "class_display">
 			<a href = "?char=warrior"><img src = "img/warrior.png" alt = "Warrior"></a>
-			<a href = "?char = paladin"><img src = "img/paladin.png" alt = "Paladin"></a>
+			<a href = "?char=paladin"><img src = "img/paladin.png" alt = "Paladin"></a>
 			<a href = "?char = hunter"><img src = "img/hunter.png" alt = "Hunter"></a>
 			<a href = "?char = rogue"><img src = "img/rogue.png" alt = "Rogue"></a>
 			<a href = "?char = priest"><img src = "img/priest.png" alt = "Priest"></a>
@@ -80,7 +80,7 @@ class CharPage(Page):
 		<h1> We are in an H1..there is a self.title inside this h1 too..but it doesn't want to print {self.title}</h1>
 		<h1>{self.armor}</h1>
 		<h1>{self.weapons}</h1>
-		<a href = "" alt = "yeah yeah I know it doesn't work"><p>Go Back</p>		
+				
 		'''	
 		self._html_close = '''
 		</article>
@@ -105,6 +105,6 @@ class CharPage(Page):
 
 #print out individual character class when called up via img click
 	def print_out_char(self):			#defines a method to print out the form that we will call over in main.py
-		all =  self._head + self._header +  self._html + self._html_close + self._footer + self._close  
+		all =  self._head + self._header   + self._html + self._main + self._html_close + self._footer + self._close  
 		all = all.format(**locals())   
 		return all
