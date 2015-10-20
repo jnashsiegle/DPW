@@ -150,10 +150,21 @@ header p a {
 }
 #wrapper {
   position: relative;
-  width: 65%;
+  width: 100%;
   margin: 0 auto;
   color: #014a06;
   background-color: #ede8d9;
+  -moz-border-radius: 10px / 10px;
+  -webkit-border-radius: 10px 10px;
+  border-radius: 10px / 10px;
+  padding: 30px;
+}
+#wrapper2 {
+  position: relative;
+  width: 85%;
+  margin: 0 auto;
+  color: #014a06;
+  background-color: #ffffff;
   -moz-border-radius: 10px / 10px;
   -webkit-border-radius: 10px 10px;
   border-radius: 10px / 10px;

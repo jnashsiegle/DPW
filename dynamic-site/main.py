@@ -14,10 +14,11 @@ from pages import CharPage
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
+    	#let's create our page
+		p = CharPage()
     	#let's import some data		
 		d = Data()
-		#let's create our page
-		p = CharPage()
+		
 
 		#GET Method - depending on class_arr
 		if self.request.GET:
@@ -26,11 +27,13 @@ class MainHandler(webapp2.RequestHandler):
 			print char	
 			#yes it is	
 			if char == "warrior":
-				print d.class_arr[0]
-				p.html = d.class_arr[0] #links p.html to the class_arr in Data(), opening up the variables to the html in pages I am hoping?
+				print d.class_arr[0].title, d.class_arr[0].armor, d.class_arr[0].weapons
+				p.title = d.class_arr[0].title
+				p.armor = d.class_arr[0].armor
+				p.html = d.class_arr[0].title, d.class_arr[0].armor, d.class_arr[0].weapons #links p.html to the class_arr in Data(), opening up the variables to the html in pages I am hoping?
 			elif char == "paladin":
-				print d.class_arr[1]
-				p.html = d.class_arr[1]
+				print d.class_arr[1].title, d.class_arr[1].armor, d.class_arr[1].weapons
+				p.html = d.class_arr[1].title, d.class_arr[1].armor, d.class_arr[1].weapons
 
 			#this should now print out character specifics to browser
 			self.response.write(p.print_out_char())

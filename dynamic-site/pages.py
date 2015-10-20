@@ -65,7 +65,7 @@ class CharPage(Page):
 	#subclass of Page
 	#contents of char specific info
 		super(CharPage, self).__init__()
-		self._title = ''
+		self.title = ''
 		self.type = ''
 		self.standard = ''
 		self.armor = ''
@@ -75,11 +75,11 @@ class CharPage(Page):
 			
 		#let's make the html now
 		self._html = '''
-		<article id = "wrapper">
+		<article id = "wrapper2">
 		<p>Hellooooooo????  Yay!  We are here!</p>
 		<h1> We are in an H1..there is a self.title inside this h1 too..but it doesn't want to print {self.title}</h1>
-		<h1>{self.armor}</h1>
-		<h1>{self.weapons}</h1>
+		<h1> Armor = {self.armor}</h1>
+		<h1> Weapons = {self.weapons}</h1>
 				
 		'''	
 		self._html_close = '''
@@ -105,6 +105,6 @@ class CharPage(Page):
 
 #print out individual character class when called up via img click
 	def print_out_char(self):			#defines a method to print out the form that we will call over in main.py
-		all =  self._head + self._header   + self._html + self._main + self._html_close + self._footer + self._close  
+		all =  self._head + self._header  + self._html + self._html_close + self._main + self._footer + self._close  
 		all = all.format(**locals())   
 		return all
