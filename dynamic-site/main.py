@@ -27,7 +27,8 @@ class MainHandler(webapp2.RequestHandler):
 			print char	
 			#yes it is	
 			if char == "warrior":
-				print d.class_arr[0].title, d.class_arr[0].armor, d.class_arr[0].weapons
+				#let's test with a print to console
+				#print d.class_arr[0].title, d.class_arr[0].armor, d.class_arr[0].weapons
 				p.title = d.class_arr[0].title
 				p.type = d.class_arr[0].type
 				p.standard = d.class_arr[0].standard
@@ -35,9 +36,7 @@ class MainHandler(webapp2.RequestHandler):
 				p.weapons = d.class_arr[0].weapons
 				p.image = d.class_arr[0].image
 				p.desc = d.class_arr[0].desc
-				#p.html = d.class_arr[0].title, d.class_arr[0].armor, d.class_arr[0].weapons #links p.html to the class_arr in Data(), opening up the variables to the html in pages I am hoping?
 			elif char == "paladin":
-				print d.class_arr[1].title, d.class_arr[1].armor, d.class_arr[1].weapons
 				p.title = d.class_arr[1].title
 				p.type = d.class_arr[1].type
 				p.standard = d.class_arr[1].standard
@@ -45,6 +44,78 @@ class MainHandler(webapp2.RequestHandler):
 				p.weapons = d.class_arr[1].weapons
 				p.image = d.class_arr[1].image
 				p.desc = d.class_arr[1].desc
+			elif char == "hunter":				
+				p.title = d.class_arr[2].title
+				p.type = d.class_arr[2].type
+				p.standard = d.class_arr[2].standard
+				p.armor = d.class_arr[2].armor
+				p.weapons = d.class_arr[2].weapons
+				p.image = d.class_arr[2].image
+				p.desc = d.class_arr[2].desc
+			elif char == "rogue":				
+				p.title = d.class_arr[3].title
+				p.type = d.class_arr[3].type
+				p.standard = d.class_arr[3].standard
+				p.armor = d.class_arr[3].armor
+				p.weapons = d.class_arr[3].weapons
+				p.image = d.class_arr[3].image
+				p.desc = d.class_arr[3].desc
+			elif char == "priest":				
+				p.title = d.class_arr[4].title
+				p.type = d.class_arr[4].type
+				p.standard = d.class_arr[4].standard
+				p.armor = d.class_arr[4].armor
+				p.weapons = d.class_arr[4].weapons
+				p.image = d.class_arr[4].image
+				p.desc = d.class_arr[4].desc
+			elif char == "death_knight":				
+				p.title = d.class_arr[5].title
+				p.type = d.class_arr[5].type
+				p.standard = d.class_arr[5].standard
+				p.armor = d.class_arr[5].armor
+				p.weapons = d.class_arr[5].weapons
+				p.image = d.class_arr[5].image
+				p.desc = d.class_arr[5].desc
+			elif char == "shaman":				
+				p.title = d.class_arr[6].title
+				p.type = d.class_arr[6].type
+				p.standard = d.class_arr[6].standard
+				p.armor = d.class_arr[6].armor
+				p.weapons = d.class_arr[6].weapons
+				p.image = d.class_arr[6].image
+				p.desc = d.class_arr[6].desc
+			elif char == "mage":				
+				p.title = d.class_arr[7].title
+				p.type = d.class_arr[7].type
+				p.standard = d.class_arr[7].standard
+				p.armor = d.class_arr[7].armor
+				p.weapons = d.class_arr[7].weapons
+				p.image = d.class_arr[7].image
+				p.desc = d.class_arr[7].desc
+			elif char == "warlock":				
+				p.title = d.class_arr[8].title
+				p.type = d.class_arr[8].type
+				p.standard = d.class_arr[8].standard
+				p.armor = d.class_arr[8].armor
+				p.weapons = d.class_arr[8].weapons
+				p.image = d.class_arr[8].image
+				p.desc = d.class_arr[8].desc
+			elif char == "monk":				
+				p.title = d.class_arr[9].title
+				p.type = d.class_arr[9].type
+				p.standard = d.class_arr[9].standard
+				p.armor = d.class_arr[9].armor
+				p.weapons = d.class_arr[9].weapons
+				p.image = d.class_arr[9].image
+				p.desc = d.class_arr[9].desc
+			elif char == "druid":				
+				p.title = d.class_arr[10].title
+				p.type = d.class_arr[10].type
+				p.standard = d.class_arr[10].standard
+				p.armor = d.class_arr[10].armor
+				p.weapons = d.class_arr[10].weapons
+				p.image = d.class_arr[10].image
+				p.desc = d.class_arr[10].desc
 				
 
 			#this should now print out character specifics to browser

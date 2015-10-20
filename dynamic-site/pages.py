@@ -31,15 +31,15 @@ class Page(object):   #abstract class
 		<div id = "class_display">
 			<a href = "?char=warrior"><img src = "img/warrior.png" alt = "Warrior"></a>
 			<a href = "?char=paladin"><img src = "img/paladin.png" alt = "Paladin"></a>
-			<a href = "?char = hunter"><img src = "img/hunter.png" alt = "Hunter"></a>
-			<a href = "?char = rogue"><img src = "img/rogue.png" alt = "Rogue"></a>
-			<a href = "?char = priest"><img src = "img/priest.png" alt = "Priest"></a>
-			<a href = "?char = death_knight"><img src = "img/deathknight.png" alt = "Death Knight"></a>
-			<a href = "?char = shaman"><img src = "img/shaman.png" alt = "Shaman"></a>
-			<a href = "?char = mage"><img src = "img/mage.png" alt = "Mage"></a>
-			<a href = "?char = warlock"><img src = "img/warlock.png" alt = "Warlock"></a>
-			<a href = "?char = monk"><img src = "img/monk.png" alt = "Monk">
-			<a href = "?char = druid"><img src = "img/druid.png" alt = "Druid">
+			<a href = "?char=hunter"><img src = "img/hunter.png" alt = "Hunter"></a>
+			<a href = "?char=rogue"><img src = "img/rogue.png" alt = "Rogue"></a>
+			<a href = "?char=priest"><img src = "img/priest.png" alt = "Priest"></a>
+			<a href = "?char=death_knight"><img src = "img/deathknight.png" alt = "Death Knight"></a>
+			<a href = "?char=shaman"><img src = "img/shaman.png" alt = "Shaman"></a>
+			<a href = "?char=mage"><img src = "img/mage.png" alt = "Mage"></a>
+			<a href = "?char=warlock"><img src = "img/warlock.png" alt = "Warlock"></a>
+			<a href = "?char=monk"><img src = "img/monk.png" alt = "Monk">
+			<a href = "?char=druid"><img src = "img/druid.png" alt = "Druid">
 			</div>
 		</article>
 		'''
