@@ -9,7 +9,7 @@ Dynamic Site - Project 3
 import webapp2
 
 from data import Data, CharClass
-from pages import CharPage
+from pages import Page, CharPage
 
 
 class MainHandler(webapp2.RequestHandler):
@@ -18,6 +18,8 @@ class MainHandler(webapp2.RequestHandler):
 		p = CharPage()
     	#let's import some data		
 		d = Data()
+		#need to determine printout
+		x = Page()
 		
 
 		#GET Method - depending on class_arr
@@ -120,11 +122,11 @@ class MainHandler(webapp2.RequestHandler):
 				
 
 			#this should now print out character specifics to browser
-			self.response.write(p.print_out_char())
+			self.response.write(p.print_out())
 
 		else:
 			#print out landing page with nav image gallery
-			self.response.write(p.print_out())  
+			self.response.write(x.print_out())  
 
 
 

@@ -119,7 +119,7 @@ class CharPage(Page):
 #print out individual character class when called up via img click
 	
 		
-	def print_out_char(self):			#defines a method to print out the form that we will call over in main.py
+	def print_out(self):			#defines a method to print out the form that we will call over in main.py
 		all =  self._head + self._header  + self._html + self._html_close + self._main + self._footer + self._close  
 		all = all.format(**locals())   
 		return all
