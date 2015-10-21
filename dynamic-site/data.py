@@ -47,7 +47,7 @@ class Data(object):
 		hunter.weapons = 'Bows, Crossbows, Guns'
 		hunter.image = 'img/hunter.png'
 		hunter.desc = '<p>Hunters pull, use threat redirection, crowd control, and primarily ranged damage. Hunters have pets that add to their DPS, add group- and raid- wide buffs, and help manage aggro. They can also track, tame, and train animals and beasts found in the wild. The well trained pet, on countless occasions, has saved a hunter\'s life. They are the only class that can name, feed, and &apos;train&apos; their pets; they can also be &apos;trained&apos; to have one of three specializations: Ferocity for burst DPS, Cunning for utility, and Tenacity for tanking. This specialization can be switched at any time when not in combat or dead.</p>'
-		hunter.pet = '<p>Hunters utilize a pet to help them in combat</p>'
+		hunter.pet = '<p>Hunters utilize a pet to help them in combat</p>'#my POLYMORPH EXAMPLE
 		#fourth instance of CharClass
 		rogue = CharClass()
 		rogue.title = 'Rogue'
