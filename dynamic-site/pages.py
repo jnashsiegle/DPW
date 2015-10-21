@@ -76,6 +76,7 @@ class CharPage(Page):
 		self.standard = ''
 		self.armor = ''
 		self.weapons = ''
+		self.pet = ''
 		self.desc = ''
 		self.image = ''
 		self.footer = ''
@@ -93,7 +94,7 @@ class CharPage(Page):
 		<p><span>{self.title} Standard = </span>{self.standard}</p>
 		<p><span>Armor Available to {self.title} = </span>{self.armor}</p>
 		<p><span>Weapons that {self.title}'s Use: </span> {self.weapons}</p>
-						
+		<p>{self.pet}</p>			
 		'''	
 		self._html_close = '''
 		</section>

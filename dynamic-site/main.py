@@ -55,6 +55,7 @@ class MainHandler(webapp2.RequestHandler):
 				p.weapons = d.class_arr[2].weapons
 				p.image = d.class_arr[2].image
 				p.desc = d.class_arr[2].desc
+				p.pet = d.class_arr[2].pet
 			elif char == "rogue":				
 				p.title = d.class_arr[3].title
 				p.type = d.class_arr[3].type
