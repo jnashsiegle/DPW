@@ -28,6 +28,7 @@ class MainHandler(webapp2.RequestHandler):
 			#yes it is	
 			if char == "warrior":
 				#let's test with a print to console
+				#if the url has the above keyword in it from the image link, match to the array and pull that instances attributes and load them into the html
 				#print d.class_arr[0].title, d.class_arr[0].armor, d.class_arr[0].weapons
 				p.title = d.class_arr[0].title
 				p.type = d.class_arr[0].type
