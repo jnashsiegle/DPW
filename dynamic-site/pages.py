@@ -62,9 +62,8 @@ class Page(object):   #abstract class
 '''	
 #print out landing page
 	def print_out(self):			#defines a method to print out the form that we will call over in main.py
-		all =  self._head + self._header + self._main + self._submain+ self._footer + self._close  #sets the variable all to be all the sections.
-		all = all.format(**locals())   #uses a dictionary-based string formatting
-		return all
+		return  self._head + self._header + self._main + self._submain + self._footer + self._close  #sets the variable all to be all the sections.
+		
 
 #child page to Page | this will display when image is clicked and adds in class information
 class CharPage(Page):
@@ -78,6 +77,8 @@ class CharPage(Page):
 		self.armor = ''
 		self.weapons = ''
 		self.desc = ''
+		self.image = ''
+		self.footer = ''
 		self._html = ''
 		self._html_close = ''
 			
@@ -113,9 +114,11 @@ class CharPage(Page):
 		return self._title
 	@title.setter
 	def title(self, n):
-		self._title = n
+		self._title = n	
 
 #print out individual character class when called up via img click
+	
+		
 	def print_out_char(self):			#defines a method to print out the form that we will call over in main.py
 		all =  self._head + self._header  + self._html + self._html_close + self._main + self._footer + self._close  
 		all = all.format(**locals())   
