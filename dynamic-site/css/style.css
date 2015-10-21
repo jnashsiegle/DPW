@@ -171,8 +171,8 @@ li a {
   height: 950px;
   display: inline-block;
   float: left;
-  webkit-border-radius: 20px 0 0 20px;
-  moz-border-radius: 20px 0 0 20px;
+  -webkit-border-radius: 20px 0 0 20px;
+  -moz-border-radius: 20px 0 0 20px;
   border-radius: 20px 0 0 20px;
   margin: 0 auto 0 70px;  
   background-color: rgba(64,156,195, .75);  
@@ -182,8 +182,8 @@ li a {
   position: relative;
   width: 45%;
   height: 950px;
-  webkit-border-radius: 0 20px 20px 0;
-  moz-border-radius: 0 20px 20px 0;
+  -webkit-border-radius: 0 20px 20px 0;
+  -moz-border-radius: 0 20px 20px 0;
   border-radius: 0 20px 20px 0;
   display: inline-block;
   background-color: rgba(64,156,195, .75);   
