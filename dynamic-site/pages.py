@@ -13,34 +13,42 @@ class Page(object):   #abstract class
 <!DOCTYPE HTML>							
 <html>
 	<head>
-		<title>Bring a little class!</title>
+		<title>Avatars R Us!</title>
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
 	<body>
 	''' #repetitive header for top of all pages page
 		self._header = '''
-		<header><h1>Up for a challenge? Want a little class in life?</h1>				
+		<header><h1>Avatars R Us!</h1>				
 		</header> '''
 		#repetitive main content for all pages
 		self._main = '''
-		<section id = "wrapper">
+		
+		<div id = "wrapper">
 		<h1>Classes</h1>
 		<p>A class is the primary adventuring style of a player character which determines the type of weapons and armor it can use, as well as what abilities, powers, skills, and spells it will gain throughout its adventures.</p>
-		<div id = "class_display">
-			<article><p class = "caption"><a href = "?char=warrior"><img src = "img/warrior.png" alt = "Warrior"></a>Warrior</p></article>
-			<article><p class = "caption"><a href = "?char=paladin"><img src = "img/paladin.png" alt = "Paladin"></a>Paladin</p></article>
-			<article><p class = "caption"><a href = "?char=hunter"><img src = "img/hunter.png" alt = "Hunter"></a>Hunter</p></article>
-			<article><p class = "caption"><a href = "?char=rogue"><img src = "img/rogue.png" alt = "Rogue"></a>Rogue</p></article>
-			<article><p class = "caption"><a href = "?char=priest"><img src = "img/priest.png" alt = "Priest"></a>Priest</p></article>
-			<article><p class = "caption"><a href = "?char=death_knight"><img src = "img/deathknight.png" alt = "Death Knight"></a>Death Knight</p></article>
-			<article><p class = "caption"><a href = "?char=shaman"><img src = "img/shaman.png" alt = "Shaman"></a>Shaman</p></article>
-			<article><p class = "caption"><a href = "?char=mage"><img src = "img/mage.png" alt = "Mage"></a>Mage</p></article>
-			<article><p class = "caption"><a href = "?char=warlock"><img src = "img/warlock.png" alt = "Warlock"></a>Warlock</p></article>
-			<article><p class = "caption"><a href = "?char=monk"><img src = "img/monk.png" alt = "Monk"></a>Monks</p></article>
-			<article><p class = "caption"><a href = "?char=druid"><img src = "img/druid.png" alt = "Druid"></a>Druids</p></article>
-			
-			</div>
-		</section>
+		<section id = "gallery">
+		<ul id = "class_display">
+			<li id = ""><a href = "?char=warrior"><img src = "img/warrior.png" alt = "Warrior"></a></li>
+			<li><a href = "?char=paladin"><img src = "img/paladin.png" alt = "Paladin"></a></li>
+			<li><a href = "?char=hunter"><img src = "img/hunter.png" alt = "Hunter"></a></li>
+			<li><a href = "?char=rogue"><img src = "img/rogue.png" alt = "Rogue"></a></li>
+			<li><a href = "?char=priest"><img src = "img/priest.png" alt = "Priest"></a></li>
+			<li><a href = "?char=death_knight"><img src = "img/deathknight.png" alt = "Death Knight"></a></li>
+			<li><a href = "?char=shaman"><img src = "img/shaman.png" alt = "Shaman"></a></li>
+			<li><a href = "?char=mage"><img src = "img/mage.png" alt = "Mage"></a></li>
+			<li><a href = "?char=warlock"><img src = "img/warlock.png" alt = "Warlock"></a></li>
+			<li><a href = "?char=monk" ><img src = "img/monk.png" alt = "Monk" title = "monk"></a></li>
+			<li><a href = "?char=druid"><img src = "img/druid.png" alt = "Druid"></a></li>			
+			</ul>
+		</section> <!--ends gallery-->
+		</div> <!--ends wrapper -->'''
+		self._submain = '''
+		
+		<div id = "wrapper3">
+		<img id = "avatar" src = "img/main.png" alt = "pretty avatar" title = "avatar">
+		</div>
+		
 		'''
 		#repetive footer content for all pages						
 		self._footer = '''
@@ -54,7 +62,7 @@ class Page(object):   #abstract class
 '''	
 #print out landing page
 	def print_out(self):			#defines a method to print out the form that we will call over in main.py
-		all =  self._head + self._header + self._main + self._footer + self._close  #sets the variable all to be all the sections.
+		all =  self._head + self._header + self._main + self._submain+ self._footer + self._close  #sets the variable all to be all the sections.
 		all = all.format(**locals())   #uses a dictionary-based string formatting
 		return all
 
@@ -76,13 +84,15 @@ class CharPage(Page):
 		#let's make the html now
 		self._html = '''
 		<section id = "wrapper2">
-		<h1>{self.title}</h1>
+		<article id = "classInfo"><h1>{self.title}</h1>
+		<div id = "gradient"><img src = {self.image} alt = '{self.title}'>
+		</article>
 		<p>{self.desc}</p>
-		<p>{self.title} Combat Type = {self.type}</p>
-		<p>{self.title} Standard = {self.standard}</p>
-		<p>Armor Available to {self.title} = {self.armor}</p>
-		<p>Weapons that {self.title}'s Use:  {self.weapons}</p>
-		<img src = {self.image} alt = '{self.title}'>				
+		<p><span>{self.title} Combat Type = </span>{self.type}</p>
+		<p><span>{self.title} Standard = </span>{self.standard}</p>
+		<p><span>Armor Available to {self.title} = </span>{self.armor}</p>
+		<p><span>Weapons that {self.title}'s Use: </span> {self.weapons}</p>
+						
 		'''	
 		self._html_close = '''
 		</section>
