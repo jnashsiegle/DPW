@@ -57,7 +57,7 @@ colors:
 #409cc3 - medium blue (background for wrapper)
 #90e2f4 - light blue
 */
-header::after, footer::before, #wrapper2::before{
+header::after, footer::before{
   content: "";
   display: table;
   clear: both; 
@@ -174,7 +174,7 @@ li a {
   -webkit-border-radius: 20px 0 0 20px;
   -moz-border-radius: 20px 0 0 20px;
   border-radius: 20px 0 0 20px;
-  margin: 0 auto 0 84px;  
+  margin: 0 auto 0 70px;  
   background-color: rgba(64,156,195, .75);  
   padding: 50px;
 }
@@ -183,7 +183,7 @@ li a {
   width: 45%;
   height: 950px;
   float: right;
-  margin: 0 84px 0 auto;
+  margin: 0 70px 0 auto;
   -webkit-border-radius: 0 20px 20px 0;
   -moz-border-radius: 0 20px 20px 0;
   border-radius: 0 20px 20px 0;
