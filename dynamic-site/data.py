@@ -47,7 +47,7 @@ class Data(object):
 		hunter.weapons = 'Bows, Crossbows, Guns'
 		hunter.image = 'img/hunter.png'
 		hunter.desc = '<p>Hunters pull, use threat redirection, crowd control, and primarily ranged damage. Hunters have pets that add to their DPS, add group- and raid- wide buffs, and help manage aggro. They can also track, tame, and train animals and beasts found in the wild. The well trained pet, on countless occasions, has saved a hunter\'s life. They are the only class that can name, feed, and &apos;train&apos; their pets; they can also be &apos;trained&apos; to have one of three specializations: Ferocity for burst DPS, Cunning for utility, and Tenacity for tanking. This specialization can be switched at any time when not in combat or dead.</p>'
-		hunter.pet = '<p>Hunters utilize a pet to help them in combat</p>'
+		hunter.pet = '<p>Hunters utilize a pet to help them in combat.</p>'
 		#fourth instance of CharClass
 		rogue = CharClass()
 		rogue.title = 'Rogue'
@@ -110,7 +110,7 @@ class Data(object):
 		monk.armor = 'Cloth, Leather'
 		monk.weapons = 'Fist Weapons, One-Handed Axes, One-Handed Maces, One-Handed Swords, Polearms, Staves'
 		monk.image = 'img/monk.png'
-		monk.desc = '<p>Monks are a hybrid class. Masters of bare-handed combat, monks choose to draw their weapons only for devastating finishing moves. Monk healers bring harmony and balance to every group, healing even the most grievous of injuries with ancient remedies and focused spiritual arts. Few can hope to outlast the unquenchable prowess of the monk Brewmaster, whose empowering beverages and unpredictable combat style allow them to absorb incredible amounts of punishment.<p>'
+		monk.desc = '<p>Monks are a hybrid class. Masters of bare-handed combat, monks choose to draw their weapons only for devastating finishing moves. Monk healers bring harmony and balance to every group, healing even the most grievous of injuries with ancient remedies and focused spiritual arts. Few can hope to outlast the unquenchable prowess of the monk Brewmaster, whose empowering beverages and unpredictable combat style allow them to absorb incredible amounts of punishment.</p>'
 		#11th instance of CharClass
 		druid = CharClass()
 		druid.title = 'Druid'
@@ -119,7 +119,7 @@ class Data(object):
 		druid.armor = 'Cloth, Leather'
 		druid.weapons = 'Daggers, Fist Weapons, One-Handed Maces, Polearms, Staves, Two-Handed Maces'
 		druid.image = 'img/druid.png'
-		druid.desc = '<p>The druid is a shapeshifting, hybrid class and also one of the most versatile classes in the game. As with other hybrids, druids need to specialize in a single role for the best results. Due to their need to shape-shift to fulfill roles, they can only perform one role at a time; they must switch between the different shapes to adapt to changing situations.<p>'
+		druid.desc = '<p>The druid is a shapeshifting, hybrid class and also one of the most versatile classes in the game. As with other hybrids, druids need to specialize in a single role for the best results. Due to their need to shape-shift to fulfill roles, they can only perform one role at a time; they must switch between the different shapes to adapt to changing situations.</p>'
 
 
 

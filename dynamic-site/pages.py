@@ -29,7 +29,7 @@ class Page(object):   #abstract class
 		<p>A class is the primary adventuring style of a player character which determines the type of weapons and armor it can use, as well as what abilities, powers, skills, and spells it will gain throughout its adventures.</p>
 		<section id = "gallery">
 		<ul id = "class_display">
-			<li id = ""><a href = "?char=warrior"><img src = "img/warrior.png" alt = "Warrior"></a></li>
+			<li><a href = "?char=warrior"><img src = "img/warrior.png" alt = "Warrior"></a></li>
 			<li><a href = "?char=paladin"><img src = "img/paladin.png" alt = "Paladin"></a></li>
 			<li><a href = "?char=hunter"><img src = "img/hunter.png" alt = "Hunter"></a></li>
 			<li><a href = "?char=rogue"><img src = "img/rogue.png" alt = "Rogue"></a></li>
@@ -87,9 +87,9 @@ class CharPage(Page):
 		self._html = '''
 		<section id = "wrapper2">
 		<article id = "classInfo"><h1>{self.title}</h1>
-		<div id = "gradient"><img src = {self.image} alt = '{self.title}'>
+		<div id = "gradient"><img src = {self.image} alt = '{self.title}'></div>
 		</article>
-		<p>{self.desc}</p>
+		{self.desc}
 		<p><span>{self.title} Combat Type = </span>{self.type}</p>
 		<p><span>{self.title} Standard = </span>{self.standard}</p>
 		<p><span>Armor Available to {self.title} = </span>{self.armor}</p>
