@@ -1,39 +1,64 @@
-''''
-mvc
 '''
-
-
+mvc weather app
+'''
 import webapp2
 import urllib2 #python classes and code needed to open up url info (requesting info, receiving info and opening it)
 #from xml.dom import minidom
-#from xml.etree.ElementTree import QName
-#import xml.etree.ElementTree as ET #so we don't have to retype the whole long string any longer
-#import json
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
     	p = FormPage() #still uses page attributes except for private
-    	p.inputs = [['city', 'text', 'City'],['country', 'text', 'Country'], ['Submit', 'submit']]
+    	p.inputs = [['zip', 'text', 'zip code'], ['Submit', 'submit']]
 	self.response.write(p.print_out())
 
-	if self.request.GET:  #this makes it so that it works only if there is a zip variable in the url otherwise it stays blank...otherwise it would generate an error
+	if self.request.GET:  
 	
 	#get info from API
-		city = self.request.GET['city']
-		country = self.request.GET['country'] 
-		url = "http://api.openweathermap.org/data/2.5/weather?q=" + city+ ", "+country #grabbing city & country fields from jso
+		zip = self.request.GET['zip'] #gets the zip code out of the url by self.request.GET
+		url = "http://xml.weather.yahoo.com/forecastrss?p=" + zip #
 	#assemble the request
-		request = urllib2.Request(url) #requesting the url
-	#use the urllib2 to create object to get the url
+		request = urllib2.Request(url) 
 		opener = urllib2.build_opener()
 	#use the url to get a result - request info from the API
 		result = opener.open(request)
 
-	#parse the mvc - this will change depending on if using minidom, etree whatever API
-		
-        
+	#parse the XML
+		xmldoc = minidom.parse(result) #allows us to access the items in the xml at yahoo weather
+		self.response.write (xmldoc.getElementsByTagName('title')[2].firstChild.nodeValue)  
+		self.content = '<br />' 
+		list = xmldoc.getElementsByTagName("yweather:forecast") 
+		self._dos = [] #dos is short for data objects
+		for tag in list:
+			do = WeatherData() #create a data object
+			do.day = tag.attributes['day'].value
+			do.high = tag.attributes['high'].value
+			do.low = tag.attributes['low'].value
+			do.date = tag.attributes['date'].value
+			do.code = tag.attributes['code'].value
+			do.condition = tag.attributes['text'].value
+			self._dos.append(do) #put into data object
+		print self._dos
 
-class Page(object):  #borrowing stuff from the object class  | ABSTRACT CLASS ONLY EXISTS TO BE THE SUPER TO THE SUBS THERE IS NO INSTANCE OF PAGE
+
+		for item in list:
+			self.content += "  HIGH: "+item.attributes['high'].value
+			self.content += "  LOW: "+item.attributes['low'].value
+			self.content += "  CONDITION: "+item.attributes['text'].value
+			self.content += ' <img src = "img/'+item.attributes['code'].value+'.png"  width = "30" />'  
+			self.content += '<br />'
+			self.content += '<br />'
+
+		
+class WeatherData(object):	#'''this data object holds hte data fetched by the model and shown by the view'''
+	def __init__(self):
+		self.day = ''
+    	self.high = ''
+    	self.low = ''
+    	self.code = '' 
+    	self.condition = ''  
+    	self.date = ''
+
+class Page(object): 
 	def __init__(self):		
 		self._head = '''
 <!DOCTYPE HTML>
@@ -51,7 +76,7 @@ class Page(object):  #borrowing stuff from the object class  | ABSTRACT CLASS ON
 	def print_out(self):
 		return self._head + self._body + self._close
 
-class FormPage(Page): #subclass of Page, which is why Page is in ()
+class FormPage(Page): 
 	def __init__(self):
 	#constructor function for the super class
 		super(FormPage, self).__init__()
@@ -59,10 +84,7 @@ class FormPage(Page): #subclass of Page, which is why Page is in ()
 		self._form_close = '</form>'
 		self.__inputs = []
 		self._form_inputs = ''
-		#<label>First Name:  </label><input type = "text" value = "" name = "first_name" placeholder = "First Name" /> 
-		#['first_name', 'text', 'First Name']
-		#<label>Last Name:  <input type = "text" value = "" name = "last_name" placeholder = "Last Name/>
-		#<input type = "submit" value = "Submit" />
+		
 
 	@property
 	def inputs(self):
@@ -84,16 +106,8 @@ class FormPage(Page): #subclass of Page, which is why Page is in ()
 			else:
 				self._form_inputs += '" />'
 				
-			'''	An alternative to the above is the try and except method			
-			try:
-				self._form_inputs += '" placeholder = "' + item[2] + '" />'
-			#otherwise.. end the tag 
-			except:
-				self._form_inputs += '" />'
-				'''
-		print self._form_inputs
-
-	#POLYMORPHISM ALERT!!!!! -----METHOD OVERRIDING  | SAME AS ABOVE, THIS IS LAST SO OVERRIDES THE ABOVE
+			
+	
 	def print_out(self):
 		return self._head + self._body + self._form_open  + self._form_inputs + self._form_close + self._close
 
