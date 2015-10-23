@@ -1,5 +1,5 @@
 '''
-Polymorphism Demo
+etree weather app
 '''
 import webapp2
 import urllib2 #python classes and code needed to open up url info (requesting info, receiving info and opening it)

@@ -1,21 +1,27 @@
+''''
+json weather app
 '''
-minidom weather app
-'''
+
+
 import webapp2
 import urllib2 #python classes and code needed to open up url info (requesting info, receiving info and opening it)
-from xml.dom import minidom
+#from xml.dom import minidom
+#from xml.etree.ElementTree import QName
+#import xml.etree.ElementTree as ET #so we don't have to retype the whole long string any longer
+import json
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
     	p = FormPage() #still uses page attributes except for private
-    	p.inputs = [['zip', 'text', 'zip code'], ['Submit', 'submit']]
+    	p.inputs = [['city', 'text', 'City'],['country', 'text', 'Country'], ['Submit', 'submit']]
 	self.response.write(p.print_out())
 
 	if self.request.GET:  #this makes it so that it works only if there is a zip variable in the url otherwise it stays blank...otherwise it would generate an error
 	
 	#get info from API
-		zip = self.request.GET['zip'] #gets the zip code out of the url by self.request.GET
-		url = "http://xml.weather.yahoo.com/forecastrss?p=" + zip #zip comes out of url using the following request.GET
+		city = self.request.GET['city']
+		country = self.request.GET['country'] 
+		url = "http://api.openweathermap.org/data/2.5/weather?q=" + city+ ", "+country #grabbing city & country fields from jso
 	#assemble the request
 		request = urllib2.Request(url) #requesting the url
 	#use the urllib2 to create object to get the url
@@ -23,20 +29,12 @@ class MainHandler(webapp2.RequestHandler):
 	#use the url to get a result - request info from the API
 		result = opener.open(request)
 
-	#parse the XML
-		xmldoc = minidom.parse(result) #allows us to access the items in the xml at yahoo weather
-		self.response.write (xmldoc.getElementsByTagName('title')[2].firstChild.nodeValue)  #this will print out the first title that the script sees in yahoo weather
-		self.content = '<br />' #create a content variable and breaks the list so it's not all printing the same line after CDT
-		list = xmldoc.getElementsByTagName("yweather:forecast") #creates an array/list - only works with minidom
-		for item in list:
-			self.content += "  HIGH: "+item.attributes['high'].value
-			self.content += "  LOW: "+item.attributes['low'].value
-			self.content += "  CONDITION: "+item.attributes['text'].value
-			self.content += ' <img src = "img/'+item.attributes['code'].value+'.png"  width = "30" />'  #in the img folder are png's already labeled with 1 2 3 etc matching up to the codes on yahoo weather, this adds the png matching the "code" in the xml so that the right picture shows for each day dependant on the weather
-			self.content += '<br />'
-			self.content += '<br />'
+	#parse the json - this will change depending on if using minidom, etree whatever API
+		jsondoc.load(result)
 
-		self.response.write(self.content)
+		name = doc['name']
+
+		self.response.write("City Chosen: " + name = "<br />" )
 
         
 
