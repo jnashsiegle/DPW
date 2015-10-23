@@ -2,12 +2,31 @@
 Polymorphism Demo
 '''
 import webapp2
+import urllib2 #python classes and code needed to open up url info (requesting info, receiving info and opening it)
+from xml.dom import minidom
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
     	p = FormPage() #still uses page attributes except for private
-    	p.inputs = [['first_name', 'text', 'First Name'], ['last_name', 'text', 'Last Name'], ['Submit', 'submit']]
+    	p.inputs = [['zip', 'text', 'zip code'], ['Submit', 'submit']]
 	self.response.write(p.print_out())
+
+	#get info from API
+	url = "http://xml.weather.yahoo.com/forecastrss?p=32792"
+	#assemble the request
+	request = urllib2.Request(url) #requesting the url
+	#use the urllib2 to create object to get the url
+	opener = urllib2.build_opener()
+	#use the url to get a result - request info from the API
+	result = opener.open(request)
+
+	#parse the XML
+	xmldoc = minidom.parse(result) #allows us to access the items in the xml at yahoo weather
+	print xmldoc.getElementsByTagName('title')[0].firstChild.nodeValue  #this will print out the first title that the script sees in yahoo weather
+
+
+	print result
+
         
 
 class Page(object):  #borrowing stuff from the object class  | ABSTRACT CLASS ONLY EXISTS TO BE THE SUPER TO THE SUBS THERE IS NO INSTANCE OF PAGE
@@ -16,11 +35,11 @@ class Page(object):  #borrowing stuff from the object class  | ABSTRACT CLASS ON
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>PolyMorphism</title>
+		<title>Weather App</title>
 	</head>
 	<body>'''
 
-		self._body = 'filler'
+		self._body = 'Weather App'
 		self._close = '''
 	</body>
 </html>'''
@@ -72,7 +91,7 @@ class FormPage(Page): #subclass of Page, which is why Page is in ()
 
 	#POLYMORPHISM ALERT!!!!! -----METHOD OVERRIDING  | SAME AS ABOVE, THIS IS LAST SO OVERRIDES THE ABOVE
 	def print_out(self):
-		return self._head + self._body + self._form_open + '<p>hellooooo out there!!</p>' + self._form_inputs + self._form_close + self._close
+		return self._head + self._body + self._form_open  + self._form_inputs + self._form_close + self._close
 
 
 
