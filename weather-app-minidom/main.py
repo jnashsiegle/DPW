@@ -11,21 +11,32 @@ class MainHandler(webapp2.RequestHandler):
     	p.inputs = [['zip', 'text', 'zip code'], ['Submit', 'submit']]
 	self.response.write(p.print_out())
 
+	if self.request.GET:  #this makes it so that it works only if there is a zip variable in the url otherwise it stays blank...otherwise it would generate an error
+	
 	#get info from API
-	url = "http://xml.weather.yahoo.com/forecastrss?p=32792"
+		zip = self.request.GET['zip'] #gets the zip code out of the url by self.request.GET
+		url = "http://xml.weather.yahoo.com/forecastrss?p=" + zip #zip comes out of url using the following request.GET
 	#assemble the request
-	request = urllib2.Request(url) #requesting the url
+		request = urllib2.Request(url) #requesting the url
 	#use the urllib2 to create object to get the url
-	opener = urllib2.build_opener()
+		opener = urllib2.build_opener()
 	#use the url to get a result - request info from the API
-	result = opener.open(request)
+		result = opener.open(request)
 
 	#parse the XML
-	xmldoc = minidom.parse(result) #allows us to access the items in the xml at yahoo weather
-	print xmldoc.getElementsByTagName('title')[0].firstChild.nodeValue  #this will print out the first title that the script sees in yahoo weather
+		xmldoc = minidom.parse(result) #allows us to access the items in the xml at yahoo weather
+		self.response.write (xmldoc.getElementsByTagName('title')[2].firstChild.nodeValue)  #this will print out the first title that the script sees in yahoo weather
+		self.content = '<br />' #create a content variable and breaks the list so it's not all printing the same line after CDT
+		list = xmldoc.getElementsByTagName("yweather:forecast") #creates an array/list - only works with minidom
+		for item in list:
+			self.content += "  HIGH: "+item.attributes['high'].value
+			self.content += "  LOW: "+item.attributes['low'].value
+			self.content += "  CONDITION: "+item.attributes['text'].value
+			self.content += ' <img src = "img/'+item.attributes['code'].value+'.png"  width = "30" />'  #in the img folder are png's already labeled with 1 2 3 etc matching up to the codes on yahoo weather, this adds the png matching the "code" in the xml so that the right picture shows for each day dependant on the weather
+			self.content += '<br />'
+			self.content += '<br />'
 
-
-	print result
+		self.response.write(self.content)
 
         
 
